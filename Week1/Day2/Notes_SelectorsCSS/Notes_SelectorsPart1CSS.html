@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice CSS</title>
+    <link rel="stylesheet" href="Notes_SelectorsPart2CSS.html">
+</head>
+
+<body>
+    <h1 class="is-centered is-skyblue">Title</h1>
+        <p class="is-centered">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, officia. Recusandae rem, perspiciatis corporis natus maxime, repellendus ullam repudiandae delectus voluptatum aspernatur sed laboriosam facere. Consectetur ipsum illo velit possimus.</p>
+        <div id="game">
+            <img id="player" src="Ninja.png" alt="player sprite">
+        </div>
+    <!-- For HTML elements that correspond to multiple selectors in a CSS document that perform the same function (e.g., determine the color of a text), a weight system is used to determine which CSS selector's value will be applied to the HTML element. See the line of code below. -->
+    <h1 class="is-skyblue" id="green">Green Title</h1>
+        Placeholder text.
+    <div class="quote">
+        <h1>Default Title</h1>
+        <p>
+            A paragraph denoted by the paragraph element, under the same div element as the header element of "Default Title." Notice, however, that due to how the ".quote" selector in our CSS document only applies to "p," the properties of that CSS selector only applies to the p element under the "quote" div element."
+            <h2>A Subtitle</h2>
+                <p>
+                    Another paragraph affected by the ".quote p" direct descendant selector in our CSS document.
+                </p>
+        </p>
+    </div>
+    <div class="ddsquote">
+        <h1>Default Title 2</h1>
+        <p>
+            See how here it only applies the properties of the ".ddsquote" selector in our CSS to the immediate child of the 
+        </p>
+        <p>
+            This one too, it applies the properties fo the ".ddsquote"
+        </p>
+</body>
+
+</html>

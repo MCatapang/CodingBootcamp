@@ -1,0 +1,46 @@
+/* Selectors in a CSS document correspond to the element of the same name in an HTML document */
+    h1 {    
+    color: tomato;
+    }
+
+/* Selectors in a CSS document formatted as ".selector-name" are the references for "class" attributes in their corresponding HTML document.*/
+    .is-centered {
+        text-align: center;
+    }
+    .is-skyblue {
+        color: skyblue;
+    }
+
+/* Selectors in a CSS document formatted as ".#selector" are the references for "id" attributes in their corresponding HTML document.*/
+    #game {
+        width: 320px;
+        height: 240px;
+        overflow: hidden;
+        background: linear-gradient(#1293f5, #bae8ff 80%, #35b236 80%);
+    }
+    #player {
+        margin-top: 140px;
+        margin-left: 50px;
+    }
+    #green {
+        color: green;
+    }
+
+/* The "* { }" (i.e., the Wildcard selector) can select all the elements in the webpage. */
+    * {
+        outline: 1px red;
+    }
+
+/* Descendant Selector: applies a CSS selector only to a specific child of certain element, but can also apply to grandchildren */
+    .quote p {
+        color: darkslategray;
+        font-style: italic;
+    }
+
+/* Direct Descendant Selector: similar to a Descendant Selector, but only applies to the immediate child of a certain element. */
+    .ddsquote > p {
+        color: crimson;
+        font-style: italic;
+    }
+
+/* 

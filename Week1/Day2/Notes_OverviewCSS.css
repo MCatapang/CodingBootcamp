@@ -1,0 +1,11 @@
+/*
+There are three ways of additing CSS to our HTML
+    1. Inline: adding an attribute inside an html tag
+        - Can be done through the modification of an html tag
+        - Can also be done by creating a <style> tag nested in the <head> tag
+    2. Internal
+    3. External
+It's important to use the Wildcard tag(?) in CSS in order to establish a default CSS.
+    - Different browsers have different default CSS
+    - By establishing your own default CSS, you can ensure that your basic spaghetti code html can be displayed the same throughout the different browsers that people use.
+*/
