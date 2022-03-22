@@ -1,0 +1,51 @@
+<head>
+    <meta charset="utf-8">
+    <title>The Title of the Webpage</title>
+    <meta name="description" content="The text here describes what the webpage is about. It's what will show up in search results for search engines like Google under the title of the webpage. It's important that this is relevant to your page and well-written!">
+    <link rel="stylesheet" href="my_css_file.css">
+        <!--this line links a StyleSheet, determining how HTML elements are visually displayed on the page-->
+    <script src="my_javascript_library.js"></script>
+        <!--JavaScript makes webpages interactive-->
+    <script src="another_javascript_file.js"></script> 
+        <!--You can link as many stylesheets or JavaScript files as you want within the <head> tags-->
+</head>
+
+<body>
+    <h1>Heading Tags: denote the heading for your webpage</h1>
+    <p>Paragraph Tag: identifies the paragraph in your webpage.</p>
+
+    <a>Anchor tags are used for links, and they can be used with either text or images.</a>
+        <a href="https://www.google.com">This is the sentence that'll link you to your Absolute URL denoted by the "href" attribute</a>
+        <a href="https://www.google.com"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png"></a>
+        <a href="AnotherFileInWebsite.html">You're not limited to just using Absolut URLs as values in your "href" attributes – you can also use a Relative URL that points to another file within a website.</a>
+        <a href="#top">You can also use Anchor URLs as the values inside your href attributes, so you can link text to an anchor inside your webpage.</a>
+    
+    <p>There are two types of HTML lists: Ordered Lists and Unordered Lists.</p>
+        <ol>
+                <li>Ordered Lists are numbered.</li>
+                <li>This is an example.</li>
+        </ol>
+        <ul>
+                <li>Unordered Lists are just bullet points.</li>
+                <li>This is another example of them.</li>
+        </ul>
+    </p>
+
+    <p>Tables can be used to display information. Because of how tables are made up of many different parts, there are many tags associated with a table.
+        <table>
+            <thead><!--tag denoting which portion of the code is the Table Header-->
+                <tr><!--tag denoting a new table row-->
+                    <th>Name</th><!--the "th" tag denotes that "Name" is the name for the first header-->
+                    <th>Age</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody><!--Tag denoting the portion of the code for the Table Body-->    
+                </tr><!--Second row (technically speaking) and can be considered the first row for the body-->
+                    <td>Michael Angelo</td><!--the "td" tag denotes that "Michael Angelo" is the data for the first body row's "Name" column-->
+                    <td>Twenty-Three (23)</td>
+                    <td>Irvine, California</td>
+                </tr>
+            </tbody>
+        </table>
+</body>

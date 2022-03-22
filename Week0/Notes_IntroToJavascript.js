@@ -1,0 +1,3 @@
+function onButtonTapTurnFlashlightOn() {
+    lightBulbOn = true;
+}
