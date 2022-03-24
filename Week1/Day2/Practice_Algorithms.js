@@ -31,11 +31,17 @@ console.log(a + " hello");
 
 // Loop
     // Loop: it's an iteration (i.e., it performs multiple actions)
-
-for(var i=0; 9<10; i++) {
-    console.log(i)
-    i = i + 3
-}
+        for(var i=0; 9<10; i++) {
+            console.log(i)
+            i = i + 3
+        }
 
     // the variable for "for" is "i=0"
     // it's usually structured as "for(loop variable; condition; increment)
+
+// Dependent-Independent Index Values in Arrays (you made these terms; they're not verified to be correct)
+    // for the following example, the index value to the left of the operator will copy the value of the index value to the right of the operator.
+        i = [1,2,3,4,5]
+        i[0] = i[4]
+        i[0] = 5
+        i = [5,2,3,4,5]
