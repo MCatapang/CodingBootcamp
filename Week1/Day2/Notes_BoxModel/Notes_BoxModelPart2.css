@@ -1,0 +1,9 @@
+h1 {
+    color: rebeccapurple;
+    background-color: azure;
+    text-align: center;
+    text-decoration: line-through;
+    font-style: italic;
+    font-weight: bold;
+    font-family: cursive;
+}

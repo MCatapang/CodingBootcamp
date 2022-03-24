@@ -1,0 +1,24 @@
+h1 {
+    background-color: black;
+}
+
+h2 {
+    background-color: rebeccapurple;
+    font-weight: 300;
+    text-align: center;
+    font-style: italic;
+}
+
+h3 {
+    text-decoration: underline;
+    text-align: right;
+    background-color: aquamarine;
+}
+
+.textAqua {
+    color: aqua;
+}
+
+.textViolet {
+    color: violet
+}
