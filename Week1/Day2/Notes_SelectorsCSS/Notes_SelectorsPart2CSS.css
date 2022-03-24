@@ -44,27 +44,31 @@
     }
 
 
-
-
-**** Stopped taking notes at https://login.codingdojo.com/m/201/7501/53140 ****
-
 /* Combining Selectors */
+    /* relative strengths of selectors can be combined into a stronger selector */
+        div#game p.score
+    /* the code above will select a paragraph with the class "score" that is a child of a div with the id "game" */
+
+
 /* Attribute Selectors */
-    /* HTML */
-        <form action="/process" method="post">
+    /* if you have an html element in multiple forms, and you need to apply different CSS stylings to each of them, you can create different blocks of CSS code that applies to each individual form of that element. */
+        /* for the HTML code below... */
+            <form action="/process" method="post">
                 <input type="text" name="username" value="Rebecca">
                 <input type="submit" value="Enter Username">
-        </form>
-    /* CSS */
-        input {
-            padding: 5px;
-            border-color: rebeccapurple;
-        }
-        input[type="text"] {
-            border: none;
-            border-bottom: 2px solid rebeccapurple;
-        }
-        input[type="submit"] {
-            color: white;
-            background-color: rebeccapurple;
-        }
+            </form>
+        /* the corresponding CSS code would be... */
+            input {
+                padding: 5px;
+                border-color: rebeccapurple;
+            }
+            input[type="text"] {
+                border: none;
+                border-bottom: 2px solid rebeccapurple;
+            }
+            input[type="submit"] {
+                color: white;
+                background-color: rebeccapurple;
+            }
+        /* the padding color for all inputs would have the same padding and border color */
+        /* however, they would be differentiated by the "input[type=""]" selectors */
