@@ -1,0 +1,27 @@
+/* The Box Model: the content is enclosed in padding, which is enclosed in the border, and then enclosed in the margin */
+    /* You can set the size of the margin, padding, or border for an element */
+        div {
+            padding: 10px;
+            border: 20px;
+            margin: 30px;
+            }
+    /* when specifying the size of a particular side for any margin, padding, or border, you can use a shorthand notation where the order goes Top, Right, Bottom, Left in a clockwise fashion */
+        div {
+            padding: 25px 50px 75px 100px;
+        }
+    /* However, utilizing the code below is also perfectly valid */
+        div {
+            padding-top: 25px;
+            padding-right: 50px;
+            padding-bottom: 75px;
+            padding-left: 100px;
+        }
+    /* According to the Box Model, the total width of an element is (Margin x2)+(Border x2)+(Padding x2)+(Content Width) */
+        /* Calcualting the height is much trickier because vertical Margins collapse */
+            /* Collapsing in this context means that the bigger Margin swallows up the smaller Margin next to it, when they're next to each other vertically  */
+            /* When the vertical margins of two elements are touching, only the margin of the element with the largest margin will be honored */
+            /* The margin of the element with the smaller margin will be collapsed to zero */
+        /* There are other situations where elements do not have their margins collapse */
+            /* floated elements */
+            /* absolutely positions elements */
+            /* inline-block elements */
