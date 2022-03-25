@@ -25,3 +25,61 @@
             /* floated elements */
             /* absolutely positions elements */
             /* inline-block elements */
+
+/* Inline and Block */
+    /* Every HTML element has a default display property of either "inline" (e.g., <input>) or "block" (e.g., <div>).
+
+
+    /* HTML elements' display properties can be changed through CSS, however */
+        h1, h2 {
+            display: inline;
+            background-color: cyan;
+        }
+        label, input {
+            display: block;
+        }
+
+
+    /* "Inline" doesn't allow elements' widths to be resized. */
+        h1, h2 {
+            display: inline;
+            background-color: cyan;
+            width: 200px; /* this won't work!!! */
+        }
+
+
+    /* for elements that typically go inline such as... */
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">User Profile</a>
+        <a href="#">Contact Us</a>
+    /* we can use "display: block" to make them go on top of one another instead */
+        a {
+            display: block;
+        }
+
+
+/* Inline-Block: display property that allows you to display two elements Inline while adjusting their width at the same time */
+    h1, h2 {
+        display: inline-block;
+        background-color: cyan;
+        width: 200px; /* this will work! */
+    }
+
+    /* This can be used to create text columns like in cases where the HTML is... */
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+
+    /* and the CSS is... */
+        p {
+            display: inline-block;
+            width: 160px;
+            box-sizing: border-box;
+            padding: 20px;
+            background-color: lightcyan;
+            margin: 10px;
+        }
+
+    /* For multiple columns that don't have the same amount of content, however, the default alignment for their boxes is at the bottom */
+        
+        /* This can be changed by using "vertical-align: top" */
