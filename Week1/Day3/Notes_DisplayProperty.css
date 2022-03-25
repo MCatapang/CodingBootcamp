@@ -34,3 +34,24 @@
             justify-content: space-evenly;
             justify-content: space-around
         }
+
+/* flex shorthand */
+    /* Allows you to easily create, add, or remove columns with equal horizontal space */
+    /* For example: the columns in the html code block below... */
+        <div class="row">
+        <div class="col">Column</div>
+        <div class="col">Column</div>
+        <div class="col">Column</div>
+        <div class="col">Column</div>
+        <div class="col">Column</div>
+        </div>
+    /* Would share equal horizontal spaces thanks to the css code block below */
+        .row {
+            display: flex;  
+        }
+        .col {
+            flex: 1;
+            background-color: lightgreen;
+            padding: 20px;
+            margin: 10px;
+        }
