@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+}
+img {
+    height: 200px;
+}
+div.container {
+    width: 800px;
+    display: inline-block;
+}
+div.row1 {
+    background-color: skyblue;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+div.row2 {
+    background-color: pink;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+div.row3 {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
