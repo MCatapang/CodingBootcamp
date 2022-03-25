@@ -1,0 +1,9 @@
+/* Position Basics */
+  /* "position: absolute" positions an element relative to the nearest positioned ancestor, instead of being positioned relative to the viewport. */
+    /* if an element has no positioned ancestors, it uses the document body and moves along with page scrolling */
+    /* elements that are positioned absolute are removed from normal flow; can overlap elements */
+  /* "position: relative" adjusts an element relative to its normal position */
+    /* other content will not be adjusted to fit into any gap left by the element that has been positioned relative */
+  /* "position: fixed" positions an element relative to the viewport */
+    /* an element with position: fixed stays in the same place even if the page is scrolled */
+    /* does not leave a gap in the page where it would normally have been located */
