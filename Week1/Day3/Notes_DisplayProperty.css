@@ -22,5 +22,15 @@
             display: flex; /* see this line for the modification */
             align-items: center;
         }
-    /*  TIP: using "align-items: center" will prevent the columns from stretching */
-    
+    /*  however, when using "display: flex", multiple images can become distorted. This can be fixed using another property, "align-items: center" */
+
+/* justify-content */
+    /* can be used to move multiple images around a webpage, while maintaining their relative position to one another */
+        #dojo {
+            justify-content: flex-start;
+            justify-content: center;
+            justify-content: flex-end;
+            justify-content: space-between;
+            justify-content: space-evenly;
+            justify-content: space-around
+        }
