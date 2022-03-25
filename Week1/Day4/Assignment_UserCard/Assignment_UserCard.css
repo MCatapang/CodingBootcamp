@@ -1,33 +1,36 @@
-.container {
-    background-color: whitesmoke;
-    height: fit-content;
-    width: 800px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px black;
-}
-.header {
-    background-color: skyblue;
-    height: 125px;
-    width: 800px;
-    border-radius: 10px 10px 0px 0px;
-}
-#infoArea {
-    margin-left: 50px;
-    position: relative;
-    bottom: 50px;
-    width: fit-content;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.userCircle {
-    width: 125px;
-    filter: drop-shadow(4px 4px 4px black)
-}
-.mapMarker {
-    width: 20px;w
-}
-.gear {
-    width: 20px;
-}
-.editProfile {
-    color: #2B78E4;
-}
+/* Color Blocks */
+    .container {
+        background-color: whitesmoke;
+        height: fit-content;
+        width: 800px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px black;
+    }
+    .header {
+        background-color: skyblue;
+        height: 125px;
+        width: 800px;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+/* Content */
+    #infoArea {
+        margin-left: 50px;
+        position: relative;
+        bottom: 50px;
+        width: fit-content;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .userCircle {
+        width: 125px;
+        filter: drop-shadow(4px 4px 4px black)
+    }
+    .mapMarker {
+        width: 20px;w
+    }
+    .gear {
+        width: 20px;
+    }
+    .editProfile {
+        color: #2B78E4;
+    }
