@@ -1,0 +1,28 @@
+#search {
+    border-radius: 30px;
+    border-color: #0B86AA;
+    border-style: solid;
+    background-color: #ffffff;
+    color: #0B86AA;
+    width: 140px;
+    height: 30px;
+}
+
+#add {
+    border-radius: 600px;
+    border-color: #0B86AA;
+    border-style: solid;
+    color: #ffffff;
+    background-color: #0B86AA;
+    height: 30px;
+    width: 30px;
+}
+
+#createAccount {
+    background-color:cornflowerblue;
+    color: white;
+    height: 30px;
+    width: 150px;
+    border-color: black;
+    box-shadow: 5px 5px black;
+}
