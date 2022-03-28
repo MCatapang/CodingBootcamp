@@ -1,0 +1,304 @@
+/*––Entire Screen–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+    body {
+        background-image: url("https://www.teahub.io/photos/full/95-957055_download-free-wallpaper-angle-line-white-minimalist-minimalistic.jpg");
+        background-attachment: fixed;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        display: block;
+        overflow-x: auto;
+    }
+    body *{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+
+
+
+    /*––Navigation Bar–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+        .navigationBar {
+            background-color: rgba(14, 14, 14, 0.85);
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            position: sticky;
+            top: 0px;
+            width: 100%;
+            margin: 0px;
+        }
+        .nav-title {
+            display: inline-flex;
+            margin: 20px;
+            align-items: center;
+        }
+        .nav-links {
+            text-decoration: none;
+            justify-content: space-between;
+            display: inline-flex;
+            align-items: center;
+            width: 500px;
+            margin: 20px;
+            padding: 2px;
+        }
+        li {
+            display: inline;
+            margin: 0px;
+        }
+        a {
+            color: inherit;
+            text-decoration: inherit;
+        }
+        .btn {
+            background: skyblue;
+            height: 30px;
+            width: 120px;
+            border-color: black;
+            font-size: inherit;
+            font-family: inherit;
+            font-style: inherit;
+            border-radius: 10px;
+        }
+
+
+
+
+    /*––Main Content–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+        .mainContent {
+            display: flex;
+            width: 100%;
+        }
+
+        /*––Column 1–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+            .column1 {
+                width: 55%;
+                padding: 40px 10px 40px 40px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                ;
+            }
+
+                /*––User Card–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+                    .userCard {
+                        background-color: whitesmoke;
+                        height: 410px;
+                        width: 500px;
+                        border-radius: 10px;
+                        margin: 0px 0px 40px 0px;
+                        box-shadow: 2px 2px 4px black;
+                        margin-left: 30px;
+                    }
+                    .header {
+                        background: linear-gradient(
+                            45deg,
+                            rgba(255, 0, 0, .85) 0%,
+                            rgba(255, 177, 9, .85) 10%,
+                            rgba(211, 224, 28, .85) 20%,
+                            rgba(65, 196, 60, .85) 30%,
+                            rgba(49, 240, 237, .85) 40%,
+                            rgba(46, 210, 235, .85) 50%,
+                            rgba(1, 119, 253, .85) 60%,
+                            rgba(83, 3, 243, .85) 70%,
+                            rgba(177, 4, 240, .85) 80%,
+                            rgba(233, 5, 202, .85) 90%,
+                            rgba(255, 0, 0, .85) 100%
+                        );
+                        height: 100px;
+                        width: 100%;
+                        border-radius: 10px 10px 0px 0px;
+                        opacity: 0.50;
+                    }
+                    .infoArea {
+                        margin-left: 25px;
+                        width: fit-content;
+                        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                        position: relative;
+                        bottom: 70px;
+                    }
+                    .userCircle {
+                        width: 150px;
+                        position: relative;
+                        left: -10px;
+                        bottom: -5px;
+                    }
+                    .textArea {
+                        font-family: inherit;
+                        position: relative;
+                        bottom: 5px;
+                    }
+                    .mapMarker {
+                        width: 20px;
+                    }
+                    .gear {
+                        width: 20px
+                    }
+                    .editProfile {
+                        color: #2B78E4;
+                    }
+
+                /*––Education–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+                    .education {
+                        background-color: whitesmoke;
+                        height: fit-content;
+                        width: 500px;
+                        border-radius: 10px;
+                        padding: 0px;
+                        box-shadow: 2px 2px 4px black;
+                    }
+                    .education > h2 {
+                        background-color: skyblue;
+                        height: 30px;
+                        margin-top: 0px;
+                        padding: 20px 25px 20px 25px;
+                        border-radius: 10px 10px 0px 0px;
+                    }
+                    .panelText {
+                        margin: 0px 12.5px 25px 25px;
+                        padding: 0px;
+                    }
+                    .educationTitle {
+                        font-size: larger;
+                    }
+                    .dateRange {
+                        opacity: .25;
+                    }
+
+        /*––Column 2–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+            .column2 {
+                width: 45%;
+                padding: 40px 10px 40px 40px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                ;
+            }
+
+                /*––Connection Requests–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+                .connectionRequests {
+                    background-color: whitesmoke;
+                    height: fit-content;
+                    width: 360px;
+                    border-radius: 10px;
+                    padding: 0px;
+                    margin: 0px 0px 40px 0px;
+                    box-shadow: 2px 2px 4px black;
+                }
+                .headerConnectionRequests {
+                    background-color: skyblue;
+                    height: 30px;
+                    margin-top: 0px;
+                    padding: 20px 25px 20px 25px;
+                    border-radius: 10px 10px 0px 0px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .notificationCircle1Character {
+                    color: white;
+                    background-color: red;
+                    border-radius: 50%;
+                    height: 33px;
+                    width: 33px;
+                    padding: 4px;
+                    text-align: center;
+                }
+                .textAreaConnectionRequests {
+                    padding: 10px;
+                    height: ;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                }
+                .request1 {
+                    height: fit-content;
+                    display: flex;
+                    padding: 5px 0px 5px 0px;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .leftConnectionRequest {
+                    display: flex;
+                    align-items: center;
+                }
+                .userConnectionRequest {
+                    width: 40px;
+                    border-radius: 40px;
+                }
+                .leftConnectionRequest > p {
+                    margin: 0px 0px 0px 10px;
+                }
+                .rightConnectionRequest {
+                    width: 90px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+                .decisionConnectionRequest {
+                    width: 40px;
+                }
+                .request2 {
+                    height: fit-content;
+                    display: flex;
+                    padding: 5px 0px 5px 0px;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+
+                /*––Your Connections–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+                .yourConnections {
+                    background-color: whitesmoke;
+                    height: fit-content;
+                    width: 360px;
+                    border-radius: 10px;
+                    padding: 0px;
+                    box-shadow: 2px 2px 4px black;
+                }
+                .headerYourConnections {
+                    background-color: skyblue;
+                    height: 30px;
+                    margin-top: 0px;
+                    padding: 20px 25px 20px 25px;
+                    border-radius: 10px 10px 0px 0px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .notificationCircle4Characters {
+                    color: white;
+                    background-color: red;
+                    border-radius: 50%;
+                    height: 33px;
+                    width: 80px;
+                    padding: 4px;
+                    text-align: center;
+                }
+                .textAreaYourConnections {
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                }
+                .request3 {
+                    height: fit-content;
+                    display: flex;
+                    padding: 5px 0px 5px 0px;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .request4 {
+                    height: fit-content;
+                    display: flex;
+                    padding: 5px 0px 5px 0px;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .viewMore {
+                    border-top: 2px skyblue solid;
+                    padding: 20px 15px;
+                    text-decoration: underline;
+                    color: #2B78E4;
+                }
