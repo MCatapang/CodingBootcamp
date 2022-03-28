@@ -1,0 +1,60 @@
+/* Assignment: Button Up */
+    #btn {
+        border-radius: 30px;
+        border-color: #0B86AA;
+        border-style: solid;
+        background-color: #ffffff;
+        color: #0B86AA;
+        width: 140px;
+        height: 30px;
+    }
+
+/* Assignment: FLEX-Ible Columns */
+    .row {
+        display: flex;
+    }
+    .col {
+        flex: 1;
+    }
+    .col-2 {
+        flex: 2;
+    }
+    .col-3 {
+        flex: 3;
+    }
+
+/* Assignment: Flex Navbar */
+    .nav {
+        background-color: grey;
+        display: flex;
+        justify-content:space-between;
+        color: whitesmoke;
+    }
+    .nav-title {
+        padding: 10px;
+        margin: 7px 0px 0px 20px;
+    }
+    .nav-links {
+        padding: 10px;
+        margin-right: 20px;
+        text-decoration: none;
+    }
+    li {
+        display: inline;
+        padding: 15px;
+    }
+    a {
+        color: inherit;
+        text-decoration: inherit;
+    }
+    .btn {
+        background: skyblue;
+        height: 30px;
+        width: 120px;
+        box-shadow: 5px 5px black;
+        border-color: black;
+        border-width: 3px;
+        font-size: inherit;
+        font-family: inherit;
+        font-style: inherit;
+    }
