@@ -1,0 +1,148 @@
+body {
+    font-family: sans-serif;
+    width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*----- HEADER ------------------------------------------------------------*/
+.header {
+    width: 680px;
+    height: 20px;
+    margin: 0px 50px;
+    background-color: grey;
+    padding: 20px;
+    border-width: 5px;
+    border-radius: 2px;
+    border-color: grey;
+    border-style: solid;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.searchBar {
+    width: 300px;
+    height: 20px;
+    border: 3px;
+    border-radius: 2px;
+    border-color: black;
+    border-style: solid;
+    overflow-x: visible;
+}
+.logInButton {
+    font-size: 700;
+    width: 75px;
+    height: 30px;
+    border: 3px;
+    border-radius: 2px;
+    border-color: black;
+    border-style: solid;
+    color: white;
+    background-color: dodgerblue;
+    box-shadow: 2px 2px black;
+}
+
+
+
+/*----- MAIN CONTENT ------------------------------------------------------------*/
+.mainContent {
+    width: 770px;
+    display: flex;
+}
+
+    /*----- COLUMN 1 ------------------------------------------------------------*/
+    .column1 {
+        width: 70%;
+    }
+    .ninjaDefinition {
+        height: 180px;
+        border: 3px;
+        border-radius: 2px;
+        border-color: black;
+        border-style: solid;
+        display: flex;
+        margin: 20px 10px 20px 20px;
+    }
+    .wordBig {
+        width: 30%;
+        text-align: center;
+    }
+    .sizeHeader1{
+        font-size: 30px;
+        margin: 20px 0px 0px 0px;
+    }
+    .sizeHeader2{
+        font-size: 15px;
+        margin: 0px;
+    }
+    .sizeHeader3{
+        font-size: 10px;
+        margin: 5px 0px 30px 0px;
+    }
+    .sizeHeader4 {
+        font-size: 20px;
+    }
+    .sizeHeader5 {
+        font-size: 22px;
+    }
+    .wordExplanation {
+        width: 70%;
+        text-align: left;
+        padding: 40px 0px 0px 20px;
+
+    }
+    .likeButton {
+        font-weight: 700;
+        width: 70px;
+        height: 30px;
+        border: 3px;
+        border-radius: 2px;
+        border-color: black;
+        border-style: solid;
+        background-color: palegoldenrod;
+        box-shadow: 2px 2px black;
+    }
+
+    /*----- COLUMN 2 ------------------------------------------------------------*/
+    .column2 {
+        width: 30%;
+    }
+    .addDefinition {
+        height: 100px;
+        border: 3px;
+        border-radius: 2px;
+        border-color: black;
+        border-style: solid;
+        margin: 20px 20px 20px 10px;
+        padding: 10px;
+    }
+    .addDefinition > p {
+        margin: 0px;
+    }
+    .definitionButton {
+        font-weight: 700;
+        width: 170px;
+        height: 30px;
+        margin: 15px 1px 1px 1px;
+        border: 3px;
+        border-radius: 2px;
+        border-color: black;
+        border-style: solid;
+        color: black;
+        background-color: lightgreen;
+        box-shadow: 2px 2px black;
+        justify-self: center;
+    }
+
+
+
+
+
+
+

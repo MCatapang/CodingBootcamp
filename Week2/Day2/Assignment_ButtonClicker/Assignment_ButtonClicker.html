@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assignment_ButtonClicker.css">
+    <title>Button Clicker</title>
+</head>
+<body>
+
+
+
+
+    <div class="header">
+            <h1>Dojonary</h1>
+            <input type="text" class="searchBar" placeholder="Search"></input>
+            <button class="logInButton" onclick="toggleLogin(this)">Login</button>
+    </div>
+
+    <!----- MAIN CONTENT ------------------------------------------------------------>
+    <div class="mainContent">
+
+        <!----- COLUMN 1 ------------------------------------------------------------>
+        <div class="column1">
+            <div class="ninjaDefinition">
+                <div class="wordBig">
+                    <p class="sizeHeader1">ninja</p>
+                    <p class="sizeHeader2"><em>noun</em></p>
+                    <p class="sizeHeader3">Plural: <em>ninjas</em></p>
+                    <button onclick="alert(this)" class="likeButton">13 likes</button>
+                </div>
+                <div class="wordExplanation">
+                    <p class="sizeHeader4">
+                        A practitioner skilled in the
+                        <br>
+                        Japanese art of ninjutsu
+                    </p>
+                </div>
+            </div>
+            <div class="ninjaDefinition">
+                <div class="wordBig">
+                    <p class="sizeHeader1">ninja</p>
+                    <p class="sizeHeader2"><em>noun</em></p>
+                    <p class="sizeHeader3">Plural: <em>ninjas</em></p>
+                    <button onclick="popUp()" class="likeButton">37 likes</button>
+                </div>
+                <div class="wordExplanation">
+                    <p class="sizeHeader4">
+                        A programmer who breaks
+                        <br>
+                        down problems with zen-like
+                        <br>
+                        focus
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!----- COLUMN 2 ------------------------------------------------------------>
+        <div class="column2">
+            <div class="addDefinition">
+                <p class="sizeHeader5">    
+                    Dojonary is defined by <strong>YOU</strong>
+                </p>
+                <button onclick="removeButton(this)" class="definitionButton">
+                    Add Definition
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="Assignment_ButtonClicker.js">
+</html>
