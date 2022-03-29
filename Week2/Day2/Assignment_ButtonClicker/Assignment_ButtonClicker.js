@@ -6,6 +6,6 @@ function removeButton(element) {
     element.remove();
 }
 
-function popUp() {
+function showAlert() {
     alert("Ninja was liked");
   }
