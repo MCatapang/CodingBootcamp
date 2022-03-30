@@ -1,0 +1,47 @@
+.body {
+    margin: 0px;
+    padding: 0px;
+    font-family: ;
+}
+.flex-Y {
+    display: flex;
+    flex-direction: column;
+}
+.flex-X {
+    display: flex;
+    flex-direction: row;
+}
+.contentBox {
+    width: 450px;
+    height: 200px;
+    border-radius: 2px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    margin: 50px;
+    padding: 0px 35px 0px 35px;
+}
+.topRow {
+    justify-content: space-between;
+    align-items: center;
+}
+.topRow h1{
+    width: 50%;
+}
+.rightTopRow {
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+}
+.likeCounter {
+    width: 82px;
+    justify-content: space-between;
+}
+.likeButton {
+    width: 90px;
+    height: 35px;
+}
+.bottomRow {
+    font-size: 25px;
+    margin: 30px 0px 0px 0px;
+}

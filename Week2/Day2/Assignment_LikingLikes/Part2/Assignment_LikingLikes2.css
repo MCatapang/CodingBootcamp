@@ -1,0 +1,123 @@
+/* TOP PORTION OF PAGE */
+    body {
+        width: 900px;
+        margin: auto;
+        padding: 0px;
+        justify-content: center;
+        font-family: sans-serif;
+    }
+    .blackHeader {
+        text-align: left;
+        width: 880px;
+        margin: 0px;
+        padding: 10px;
+        color: white;
+        background-color: black;
+    }
+    .whiteHeader {
+        text-align: center;
+        width: 880px;
+        margin: 0px;
+        padding: 10px;
+        color: black;
+        background-color: white;
+    }
+
+
+
+
+/* BOTTOM PORTION */
+    .bottomPortion {
+        width: 900px;
+        justify-content: space-evenly;
+    }
+    .verticalAlign {
+        vertical-align: top;
+    }
+
+
+
+
+/* LEFT COLUMN */
+    .leftColumn {
+        text-align: center;
+        width: 20%;
+        height: 275px;
+        margin: 10px 22px 24px 0px;
+        padding: 25px;
+        border-color: black;
+        border-style: solid;
+        border-width: 2px;
+        border-radius: 2px;
+    }
+    .leftColumn > p {
+        margin: 25px 0px 0px 0px;
+    }
+    img {
+        width: 125px;
+        margin: 0px auto 0px auto;
+    }
+
+
+
+
+/* RIGHT COLUMN */
+    .rightColumn {
+        width: 80%;
+        margin: 0px 0px 24px 0px;
+        padding: 0pwx;
+        justify-content: space-between;
+    }
+
+/* LIKE BOX 1 */
+    .likeBox {
+        height: 150px;
+        margin: 10px 0px 20px 22px;
+        padding: 0px 0px 20px 20px;
+        border-color: black;
+        border-radius: 2px;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .flex-Y {
+        display: flex;
+        flex-direction: column;
+    }
+    .flex-X {
+        display: flex;
+        flex-direction: row;
+    }
+    .topRow {
+        justify-content: space-between;
+        align-items: center;
+    }
+    .topRow h1{
+        width: 50%;
+        margin: 15px 0px 0px 10px;
+    }
+    .rightTopRow {
+        width: 50%;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .likeCounter {
+        width: 80px;
+        justify-content: space-between;
+    }
+    .likeButton {
+        width: 90px;
+        height: 35px;
+    }
+    .bottomRow {
+        align-items: top;
+        font-size: 20px;
+        margin: 15px 0px 0px 10px;
+    }
+    #clicks1, #clicks2, #clicks3 {
+        margin-right: 5px;
+    }
+
+
+
+
+/* LIKE BOX 2 */

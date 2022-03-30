@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assignment_LikingLikes2.css">
+    <title>Liking Likes</title>
+</head>
+<body>
+
+
+    <!-- TOP PORTION OF PAGE -->
+    <h1 class="blackHeader">Network</h1>
+    <h1 class="whiteHeader">Your Feed</h1>
+
+    <!-- BOTTOM PORTION OF PAGE -->
+    <div class="bottomPortion flex-X verticalAlign">
+
+        <!-- LEFT COLUMN -->
+        <div class="leftColumn flex-Y">
+            <img src="user-circle.png" alt="User Profile Picture">
+            <p><a href="#">Add an avatar</a></p>
+            <h1>Michael Catapang</h1>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="rightColumn flex-Y">
+
+            <!-- LIKE BOX 1 -->
+            <div class="likeBox flex-Y">
+                <div class="topRow flex-X">
+                    <h1>
+                        Neil M
+                    </h1>
+                    <div class="rightTopRow flex-X">
+                        <h2 class="likeCounter flex-X">
+                            <div id="clicks1">
+                                9
+                            </div>
+                            like(s)
+                        </h2>
+                        <button class="likeButton" onclick="onClick1()">
+                            Like
+                        </button>
+                    </div>
+                </div>
+                <div class="bottomRow">
+                    I just set up this new discord bot,
+                    let me know what you all think.
+                    <a href="#">
+                        link.
+                    </a>
+                </div>
+            </div>
+
+            <!-- LIKE BOX 2 -->
+            <div class="likeBox flex-Y">
+                <div class="topRow flex-X">
+                    <h1>
+                        Nichole K
+                    </h1>
+                    <div class="rightTopRow flex-X">
+                        <h2 class="likeCounter flex-X">
+                            <div id="clicks2">
+                                12
+                            </div>
+                            like(s)
+                        </h2>
+                        <button class="likeButton" onclick="onClick2()">
+                            Like
+                        </button>
+                    </div>
+                </div>
+                <div class="bottomRow">
+                    <p>
+                        Just finished my
+                        <a href="#">
+                            next comic,
+                        </a>
+                        check it out
+                    </p>
+                </div>
+            </div>
+
+            <!-- LIKE BOX 3 -->
+            <div class="likeBox flex-Y">
+                <div class="topRow flex-X">
+                    <h1>
+                        Jim R
+                    </h1>
+                    <div class="rightTopRow flex-X">
+                        <h2 class="likeCounter flex-X">
+                            <div id="clicks3">
+                                9
+                            </div>
+                            like(s)
+                        </h2>
+                        <button class="likeButton" onclick="onClick3()">
+                            Like
+                        </button>
+                    </div>
+                </div>
+                <div class="bottomRow">
+                    <p>
+                        I can't stop listening to the
+                        <a href="#">
+                            new album.
+                        </a>
+                        Who else is liking it?
+                </div>
+            </div>
+        </div>
+
+
+</body>
+<script src="Assignment_LikingLikes2.js"></script>
+</html>
