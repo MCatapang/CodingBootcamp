@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Exam_YellowBelt.css">
+    <title>Yellow Belt Exam</title>
+</head>
+<body>
+
+
+    <!--NAVIGATION BAR-->
+    <div class="navigationBar flex-X">
+        <h1>
+            Gaming<a class="purpleText">Dojo</a>
+        </h1>
+        <div class="rightNavigation flex-X">
+            <div class="dropDown">
+                <form action="#">
+                    <select name="languages" id="lang">
+                      <option value="euro">EUR €</option>
+                      <option value="php">USD $</option>
+                      <option value="peso">PHP ₱</option>
+                    </select>
+              </form>
+            </div>
+            <div class="cartSection flex-X">
+                <img src="images/cart-light.png" alt="Cart Image">
+                <h3 class="underline" id="cartCount">
+                    0
+                </h3>
+            </div>
+            <img src="images/search-light.png" alt="Search Button">
+        </div>
+    </div>
+
+
+    <!--CONTENT AREA: OVERALL-->
+    <div class="mainContainer">
+        <h3>
+            Highlights
+        </h3>
+
+
+        <!--CONTENT AREA: BANNER-->
+        <div class="bannerArea flex-X">
+            <img src="images/chevron-left.png" alt="Left Banner Button" class="bannerButtonResize leftBannerButton" id="leftBannerButton" onclick="scrollLeft()">
+            <img src="images/cafe-neko.png" alt="Cafe Neko" class="banner" id="banner">
+            <img src="images/chevron-left.png" alt="Right Banner Button" class="bannerButtonResize rightBannerButton" id="rightBannerButton" onclick="scrollRight()">
+        </div>
+
+
+        <!--CONTENT AREA: STATIC BANNER NAV-->
+        <div class="staticBannerNav flex-X pageCenter">
+            <div class="grayBox">
+            </div>
+            <div class="purpleBox">
+            </div>
+            <div class="grayBox">
+            </div>
+            <div class="grayBox">
+            </div>
+        </div>
+
+
+        <!--CONTENT AREA: AVAILABLE GAMES-->
+        <div class="availableGames flex-X pageCenter">
+
+            <!--GAME 1: CAFE NEKO-->
+            <div class="gameBox gameBox1 flex-Y">
+                <!-- MINI BANNER -->
+                <img src="images/cafe-neko.png" alt="Cafe Neko">
+                <!-- GAME TITLE -->
+                <p class="availableGameTitle">
+                    Cafe Neko: Gold Edition
+                    <br>
+                    <img src="images/windows.png" alt="Windows Logo">
+                    <img src="images/apple.png" alt="Apple Logo">
+                </p>
+                <!-- NITTY GRITTY -->
+                <div class="nittyGrittyDeets flex-X">
+                    <!-- DISCOUNT PERCENT -->
+                    <div class="discountPercent">
+                        <p>
+                            -20%
+                        </p>
+                    </div>
+                    <!-- OLD AND NEW PRICES -->
+                    <div class="originalAndNewPrice flex-Y">
+                        <p>
+                            <span class="originalPrice">
+                                €14.98
+                            </span>
+                            <br>
+                            <span class="newPrice">
+                                <strong>€10.49</strong>
+                            </span>
+                        </p>
+                    </div>
+                    <!-- BUY BUTTON -->
+                    <button name="Buy" class="buyButton" onclick="increaseCartCount()">
+                        Buy
+                    </button>
+                </div>
+            </div>
+
+            <!--GAME 2: PIXEL NINJAS 2-->
+            <div class="gameBox gameBox2 flex-Y">
+                <!-- MINI BANNER -->
+                <img src="images/pixel-ninjas-2.png" alt="Pixel Ninjas 2">
+                <!-- GAME TITLE -->
+                <p class="availableGameTitle">
+                    Pixel Ninjas 2
+                    <br>
+                    <img src="images/windows.png" alt="Windows Logo">
+                    <img src="images/apple.png" alt="Apple Logo">
+                </p>
+                <!-- NITTY GRITTY -->
+                <div class="nittyGrittyDeets flex-X">
+                    <!-- DISCOUNT PERCENT -->
+                    <div class="discountPercent">
+                        <p>
+                            -10%
+                        </p>
+                    </div>
+                    <!-- OLD AND NEW PRICES -->
+                    <div class="originalAndNewPrice flex-Y">
+                        <p>
+                            <span class="originalPrice">
+                                €8.19
+                            </span>
+                            <br>
+                            <span class="newPrice">
+                                <strong>€7.39</strong>
+                            </span>
+                        </p>
+                    </div>
+                    <!-- BUY BUTTON -->
+                    <button name="Buy" class="buyButton" onclick="increaseCartCount()">
+                        Buy
+                    </button>
+                </div>
+            </div>
+
+
+            <!--GAME 3: STONEPUNK 10000 BCE-->
+            <div class="gameBox gameBox2 flex-Y">
+                <!-- MINI BANNER -->
+                <img src="images/stonepunk.png" alt="Stonepunk 10000 BCE">
+                <!-- GAME TITLE -->
+                <p class="availableGameTitle">
+                    Stonepunk 10000 BCE
+                    <br>
+                    <img src="images/windows.png" alt="Windows Logo">
+                    <img src="images/apple.png" alt="Apple Logo">
+                    <img src="images/linux.png" alt="Linux Logo" onclick="alertBox()">
+                </p>
+                <!-- NITTY GRITTY -->
+                <div class="nittyGrittyDeets flex-X">
+                    <!-- DISCOUNT PERCENT -->
+                    <div class="discountPercent">
+                        <p>
+                            NEW
+                        </p>
+                    </div>
+                    <!-- OLD AND NEW PRICES -->
+                    <div class="originalAndNewPrice flex-Y">
+                        <p>
+                            <span class="originalPrice">
+                            </span>
+                            <br>
+                            <span class="newPrice">
+                                <strong>€19.99</strong>
+                            </span>
+                        </p>
+                    </div>
+                    <!-- BUY BUTTON -->
+                    <button name="Buy" class="buyButton" onclick="increaseCartCount()">
+                        Buy
+                    </button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+<script src="Exam_YellowBelt.js"></script>
+</body>
+</html>
