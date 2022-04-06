@@ -37,5 +37,3 @@ savings = BankAccount("Savings", 0.10, 100)
 
 # credit.deposit(69).deposit(70).deposit(71).yield_interest().display_account_info()
 # savings.deposit(69).deposit(420).withdraw(20).withdraw(10).withdraw(10).withdraw(10).yield_interest().display_account_info()
-
-BankAccount.all_info()
