@@ -2,18 +2,10 @@ class User:
     def __init__(self, name, email_address):
         self.name = name
         self.email_address = email_address
-        self.account_balance = BankAccount(int_rate=0.15, balance=0)
-    def make_withdrawal(self, amount):
-        self.account_balance -= amount
-    def make_deposit(self, amount):
-        self.account_balance += amount
-    def display_user_balance(self):
-        print(f"User: {self.name}, Balance: ${self.account_balance}")
-    def transfer_money(self, user, amount):
-        self.account_balance -= amount
-        user.account_balance += amount
-        self.display_user_balance()
-        user.display_user_balance()
+        self.account = BankAccount(name, 0.15, 0)
+        # In the line of code above, setting the User attribute of
+        # "account" equal to the BankAccount class, allows you to
+        # access BankAccount method attributes using User instances
 
 class BankAccount:
     def __init__(self, name, int_rate, balance=None): 
@@ -44,3 +36,9 @@ class BankAccount:
         print(f"Your interest for this month was ${interest:.2f}.")
         return self
 
+
+michael = User("Michael Catapang", "maocatap@gmail.com")
+    # the line of code above creates an instance of the User class
+print(michael.account.int_rate)
+    # the print statement above accesses a BankAccount attribute
+    # by using a User instance
