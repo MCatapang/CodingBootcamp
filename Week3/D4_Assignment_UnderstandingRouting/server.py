@@ -14,7 +14,7 @@ def say_name(name):
     return "Hello " + str(name).capitalize()
 
 
-@app.route("/repeat/<number>/<desired_word>")
+@app.route("/repeat/<int:number>/<string:desired_word>")
 def repeat_string(number, desired_word):
     return str(desired_word*int(number))
 
@@ -22,17 +22,6 @@ def repeat_string(number, desired_word):
 def sorry_response(any):
     if any:
         return ("Sorry! No response. Try again.")
-
-
-
-
-
-
-
-
-
-
-
 
 
 if __name__=="__main__":
