@@ -6,16 +6,16 @@ def index():
     return render_template("index.html")
 
 @app.route('/play')
-def three_blue_boxes():
-    return render_template("ThreeBlueBox.html")
+def layer1():
+    return render_template("template.html", number=3, color="blue")
 
 @app.route('/play/<int:number>')
-def multiple_boxes(number):
-    return render_template("MultipleBoxes.html", number=number)
+def layer2(number):
+    return render_template("template.html", number=number, color="blue")
 
 @app.route('/play/<int:number>/<color>')
-def multiple_boxes_and_color(number, color):
-    return render_template("MultipleBoxesAndColor.html", number=number, color=color)
+def layer3(number, color):
+    return render_template("template.html", number=number, color=color)
 
 if __name__=="__main__":
     app.run(debug=True)
