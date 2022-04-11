@@ -1,0 +1,43 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+.container {
+    background: rgb(100, 100, 100);
+    width: 600px;
+    margin: 0px auto;
+    padding: 20px;
+    border-radius: 5px;
+    display: block;
+    justify-content: flex-start;
+}
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: rgb(255, 255, 0);
+}
+.displayBlock {
+    display: block;
+}
+div {
+    margin: 0px 0px 20px 0px;
+}
+input, textarea{
+    width: 99%;
+    border-radius: 5px;
+    resize: none;
+}
+select {
+    width: 100%;
+}
+.heightAdjust {
+    height: 100px
+}
+.buttonAdjust {
+    height: 60px;
+    font-size: 30px;
+    font-weight: bolder;
+    background-color: rgb(255, 255, 0);
+}
