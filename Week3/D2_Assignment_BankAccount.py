@@ -19,7 +19,7 @@ class BankAccount:
         # all of the numbers in BankAccount without having to individually place the 
         # {foobar:.2f} format method in every single line of code that displays money? Similar
         # to a wildcard tag in CSS?
-        print(f"Your account balance now is ${self.balance:.2f}.")
+        print(f"Your account balance now is ${self.balance}.")
         return self
     def yield_interest(self):
         interest = (self.balance * self.int_rate)
