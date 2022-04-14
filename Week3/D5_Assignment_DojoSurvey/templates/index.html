@@ -11,12 +11,19 @@
     <title>Dojo Survey</title>
 </head>
 <body>
+
+
+    <!-- FORM  -->
     <form action='/process' class="container" method="post">
         <h1>Dojo Survey</h1>
+
+        <!-- INPUT: NAME -->
         <div>
             <label for="name" class="displayBlock">Name:</label>
             <input type="text" name="name" class="displayBlock"></input>
         </div>
+
+        <!-- INPUT: DOJO LOCATION -->
         <div>
             <label for="dojoLocation" class="displayBlock">Dojo Location:</label>
             <select type="select" name="dojoLocation" class="displayBlock">
@@ -27,6 +34,8 @@
                 <option value="Silcion Valley, CA">Silicon Valley, CA</option>
             </select>
         </div>
+
+        <!-- INPUT: FAVORITE LANGUAGE -->
         <div>
             <label for="favoriteLanguage" class="displayBlock">Favorite Language:</label>
             <select type="select" name="favoriteLanguage" class="displayBlock">
@@ -37,13 +46,20 @@
                 <option value="C#">C#</option>
             </select>
         </div>
+
+        <!-- INPUT: COMMENTS -->
         <div>
             <label for="Comments" class="displayBlock">Comments (optional):</label>
             <textarea type="text" name="comments" class="displayBlock heightAdjust"></textarea>
         </div>
+
+        <!-- INPUT: SUBMIT BUTTON -->
         <div>
             <input type="submit" class="buttonAdjust" value="Submit">
         </div>
+
     </form>
+
+
 </body>
 </html>

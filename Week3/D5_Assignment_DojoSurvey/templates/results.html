@@ -11,23 +11,47 @@
     <title>Dojo Survey</title>
 </head>
 <body>
+
+
+    <!-- FORM -->
     <form action='/' class="container">
         <h1>Dojo Survey</h1>
+    
+        <!-- RESULTS: NAME -->
         <div>
-            <label for="name" class="displayBlock">Name: {{ session["name"] }}</label>
+            <label for="name" class="displayBlock">
+                Name: {{ session["name"] }}
+            </label>
         </div>
+
+        <!-- RESULTS: DOJO LOCATION -->
         <div>
-            <label for="dojoLocation" class="displayBlock">Dojo Location: {{ session["dojoLocation"] }}</label>
+            <label for="dojoLocation" class="displayBlock">
+                Dojo Location: {{ session["dojoLocation"] }}
+            </label>
         </div>
+
+        <!-- RESULTS: FAVORITE LANGUAGE -->
         <div>
-            <label for="favoriteLanguage" class="displayBlock">Favorite Language: {{ session["favoriteLanguage"] }}</label>
+            <label for="favoriteLanguage" class="displayBlock">
+                Favorite Language: {{ session["favoriteLanguage"] }}
+            </label>
         </div>
+
+        <!-- RESULTS: COMMENTS -->
         <div>
-            <label for="Comments" class="displayBlock">Comments: {{ session["comments"] }}</label>
+            <label for="Comments" class="displayBlock">
+                Comments: {{ session["comments"] }}
+            </label>
         </div>
+
+        <!-- INPUT: REDIRECT TO FORM PAGE  -->
         <div>
             <input type="submit" class="buttonAdjust" value="Submit Another Form">
         </div>
+
     </form>
+
+
 </body>
 </html>
