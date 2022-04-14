@@ -1,0 +1,48 @@
+-- SELECT *
+-- FROM dojos;
+
+-- INSERT INTO dojos (name, created_at, updated_at)
+-- VALUES
+-- 	("Red Dojo", NOW(), NOW()),
+--     ("Blue Dojo", NOW(), NOW()),
+--     ("Yellow Dojo", NOW(), NOW());
+
+-- DELETE FROM dojos
+-- WHERE id > 0;
+
+-- INSERT INTO dojos (id, name, created_at, updated_at)
+-- VALUES
+-- 	(1, "Orange Dojo", NOW(), NOW()),
+--     (2, "Green Dojo", NOW(), NOW()),
+--     (3, "Indigo Dojo", NOW(), NOW());
+
+
+
+SELECT *
+FROM ninjas;
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES 
+	("Liam", "Naranja", 20, NOW(), NOW(), 1),
+    ("Olivia", "Naranja", 21, NOW(), NOW(), 1),
+    ("Noah", "Naranja", 22, NOW(), NOW(), 1),
+    ("Oliver", "Verde", 17, NOW(), NOW(), 2),
+    ("Ava", "Verde", 18, NOW(), NOW(), 2),
+    ("Elijah", "Verde", 19, NOW(), NOW(), 2),
+    ("Charlotte", "Violeta", 14, NOW(), NOW(), 3),
+    ("William", "Violeta", 15, NOW(), NOW(), 3),
+    ("Sophia", "Violeta", 16, NOW(), NOW(), 3);
+--     
+-- SELECT first_name, last_name
+-- FROM ninjas
+-- WHERE dojo_id = 1;
+
+-- SELECT first_name, last_name
+-- FROM ninjas
+-- WHERE dojo_id = 3;
+
+-- SELECT dojos.name
+-- FROM dojos
+-- JOIN ninjas on ninjas.dojo_id = dojos.id
+-- ORDER BY ninjas.id DESC
+-- LIMIT 1
