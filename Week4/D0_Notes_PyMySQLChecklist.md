@@ -1,11 +1,35 @@
-# Checklist: Connecting Flask Applications to a Database
+# Checklist: Setting Up Website
 
-1. Run the code:
+## One-Time Process
+1. Install Pip Environment
+    ```
+    pip3 install pipenv
+    ```
+
+## Everytime Thing
+1. Create a ***static*** folder inside your project folder.
+    - This is where you'll store:
+        - CSS
+        - Javascript
+        - Images
+2. Create a ***templates*** folder inside your project folder.
+    - This is where you'll store:
+        - HTML
+3. Install Flask
+    ```
+    pipenv install flask==2.0.3
+    ```
+    - Doing so will create a ***Pipfile*** and ***Pipfile.lock*** file inside your project folder.
+4. Initiliaze the Pip Virtual Environment
+    ```
+    pipenv shell
+    ```
+5. Run the code:
     ```
     pipenv install PyMySQL flask
     ```
     - This will create a ***Pipfile*** and ***Pipfile*.lock** similar to installing flask
-2. Create Database
+6. Create Database
     - Utilize the MySQL Workbench to create a database. 
     - You can do so either from an ERD or a query.
     - Use the following query syntax if you want to create a database using the query line:
@@ -20,8 +44,9 @@
             updated_at DATETIME
         );
         ```
-3. Create ***mysqlconnection.py***
-    - This will be created alongside the ***server.py*** file that was created in the ***D0_Notes_FlaskChecklist***
+7. Create ***server.py***
+    -  ***server.py*** file
+8. Create ***mysqlconnection.py***
     - Copy and paste either one of the boilerplate code below into your ***mysqlconnection.py*** file
         - Without Comments:
             ```py
@@ -106,3 +131,54 @@
             def connectToMySQL(db):
                 return MySQLConnection(db)
             ```
+9. Create Class Based on Database Table
+    - Make a Python file named in accordance to the table you're referring to from your database.
+        - e.g., "friend.py"
+    - In this file, copy and paste the code below
+        - WITHOUT COMMENT
+            ```py
+            from mysqlconnection import connectToMySQL
+            class Friend:
+                def __init__( self , data ):
+                    self.id = data['id']
+                    self.first_name = data['first_name']
+                    self.last_name = data['last_name']
+                    self.occupation = data['occupation']
+                    self.created_at = data['created_at']
+                    self.updated_at = data['updated_at']
+                @classmethod
+                def get_all(cls):
+                    query = "SELECT * FROM friends;"
+                    results = connectToMySQL('first_flask').query_db(query)
+                    friends = []
+                    for friend in results:
+                        friends.append( cls(friend) )
+                    return friends
+            ```
+        - WITH COMMENT
+            ```py
+            # import the function that will return an instance of a connection
+            from mysqlconnection import connectToMySQL
+            # model the class after the friend table from our database
+            class Friend:
+                def __init__( self , data ):
+                    self.id = data['id']
+                    self.first_name = data['first_name']
+                    self.last_name = data['last_name']
+                    self.occupation = data['occupation']
+                    self.created_at = data['created_at']
+                    self.updated_at = data['updated_at']
+                # Now we use class methods to query our database
+                @classmethod
+                def get_all(cls):
+                    query = "SELECT * FROM friends;"
+                    # make sure to call the connectToMySQL function with the schema you are targeting.
+                    results = connectToMySQL('first_flask').query_db(query)
+                    # Create an empty list to append our instances of friends
+                    friends = []
+                    # Iterate over the db results and create instances of friends with cls.
+                    for friend in results:
+                        friends.append( cls(friend) )
+                    return friends
+            ```
+                        
