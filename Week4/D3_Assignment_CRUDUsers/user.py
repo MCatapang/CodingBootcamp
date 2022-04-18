@@ -19,9 +19,9 @@ class User:
         return users
 
     @classmethod
-    def get_one(cls, id):
+    def get_one(cls, data):
         query = "SELECT * FROM users WHERE id=%(id)s"
-        results = connectToMySQL('users_schema').query_db(query, id)
+        results = connectToMySQL('users_schema').query_db(query, data)
         return cls(results[0])
 
     @classmethod
