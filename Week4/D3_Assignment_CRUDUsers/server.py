@@ -4,8 +4,12 @@ app = Flask(__name__)
 app.secret_key = 'loser user'
 
 
-@app.route("/users")
+@app.route("/")
 def index():
+    return redirect("/users")
+
+@app.route("/users")
+def user_all():
     users = User.get_all()
     return render_template("all_users.html", all_users = users)
 
@@ -25,7 +29,10 @@ def creating():
 
 @app.route("/users/<int:id>/edit")
 def user_edit(id):
-    user = User.get_one({"id":id})
+    data = {
+        "id": id
+    }
+    user = User.get_one(data)
     return render_template("edit.html", user=user)
 
 @app.route("/users/<int:id>/editing", methods=["POST"])
