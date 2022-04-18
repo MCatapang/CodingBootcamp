@@ -16,19 +16,22 @@
     - This is where you'll store:
         - HTML
 3. Install Flask
-    ```
-    pipenv install flask==2.0.3
-    ```
+    - User your terminal to navigate to your project folder
+    - Once your project folder is targeted, run the following code:
+        ```
+        pipenv install flask==2.0.3
+        ```
     - Doing so will create a ***Pipfile*** and ***Pipfile.lock*** file inside your project folder.
-4. Initiliaze the Pip Virtual Environment
-    ```
-    pipenv shell
-    ```
-5. Run the code:
+4. Run the code:
     ```
     pipenv install PyMySQL flask
     ```
     - This will create a ***Pipfile*** and ***Pipfile*.lock** similar to installing flask
+    - If ***Pipfile.lock*** already exists (and it should be after you install flask), this step will simply update ***Pipfile.lock***
+5. Initiliaze the Pip Virtual Environment
+    ```
+    pipenv shell
+    ```
 6. Create Database
     - Utilize the MySQL Workbench to create a database. 
     - You can do so either from an ERD or a query.
@@ -44,9 +47,7 @@
             updated_at DATETIME
         );
         ```
-7. Create ***server.py***
-    -  ***server.py*** file
-8. Create ***mysqlconnection.py***
+7. Create ***mysqlconnection.py***
     - Copy and paste either one of the boilerplate code below into your ***mysqlconnection.py*** file
         - Without Comments:
             ```py
@@ -131,7 +132,7 @@
             def connectToMySQL(db):
                 return MySQLConnection(db)
             ```
-9. Create Class Based on Database Table
+8. Create Class Based on Database Table
     - Make a Python file named in accordance to the table you're referring to from your database.
         - e.g., "friend.py"
     - In this file, copy and paste the code below
@@ -181,4 +182,37 @@
                         friends.append( cls(friend) )
                     return friends
             ```
-                        
+9. Create ***server.py***
+    -  Copy and paste the boilerplate code below:
+        - WITHOUT COMMENTS
+            ```py
+                from flask import Flask, render_template
+                from friend import Friend
+                app = Flask(__name__)
+                
+                @app.route("/")
+                def index():
+                    friends = Friend.get_all()
+                    print(friends)
+                    return render_template("index.html")
+                            
+                if __name__ == "__main__":
+                    app.run(debug=True)
+            ```
+        - WITH COMMENTS
+            ```py
+                from flask import Flask, render_template
+                # import the class from friend.py
+                from friend import Friend
+                app = Flask(__name__)
+
+                @app.route("/")
+                def index():
+                    # call the get all classmethod to get all friends
+                    friends = Friend.get_all()
+                    print(friends)
+                    return render_template("index.html")
+                            
+                if __name__ == "__main__":
+                    app.run(debug=True)
+            ```
