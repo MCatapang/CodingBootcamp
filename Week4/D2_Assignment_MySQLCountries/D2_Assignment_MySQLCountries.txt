@@ -1,5 +1,5 @@
 -- 1. All Countries that Speak Slovene
--- SELECT countries.name, languages.language, languages.percentage
+-- SELECT countries.name, languages.language, languages.percentage -- attach the FROM query in the same line
 -- FROM countries
 -- JOIN languages ON languages.country_id = countries.id
 -- WHERE language = "Slovene"
@@ -70,7 +70,3 @@ SELECT countries.region, COUNT(countries.name)
 FROM countries
 GROUP BY countries.region
 ORDER BY COUNT(countries.name) DESC
-
-
-
-
