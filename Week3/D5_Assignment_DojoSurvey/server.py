@@ -10,6 +10,9 @@ app.secret_key = 'and they were roommates'
 def index():
     session.clear()
     return render_template("index.html")
+# for larger projects, dedicate a route to clearing sessions
+# determine whether it's needed on a project-to-project basis
+# break up functionality as much as possible
 
 # SESSION ROUTE
 @app.route("/process", methods=['POST'])
