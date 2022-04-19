@@ -1,4 +1,4 @@
-# Website Deployment Checklist
+# Website Deployment Checklist 
 
 ## **ONE-TIME PROCESS**
 1. Install Pip Environment
