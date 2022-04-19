@@ -1,5 +1,8 @@
+# ------------------------IMPORT------------------------ #
 import pymysql.cursors
 
+
+# ------------------------MySQLConnection------------------------ #
 class MySQLConnection:
     def __init__(self, db):
         connection = pymysql.connect(host = 'localhost',
@@ -30,5 +33,8 @@ class MySQLConnection:
                 return False
             finally:
                 self.connection.close() 
+
+
+# ------------------------ACCESS TO DATABASE------------------------ #
 def connectToMySQL(db):
     return MySQLConnection(db)
