@@ -45,6 +45,7 @@ class Dojo:
         query = "DELETE FROM dojos WHERE id=%(id)s;"
         return connectToMySQL('dojos_and_ninjas_schema').query_db(query, data)
 
+    # # One-to-Many Relationship CLass
     # @classmethod
     # def get_dojo_with_ninjas(cls , data):
     #     query = "SELECT * FROM clubs LEFT JOIN users ON users.club_id = club.id WHERE club.id = %(id)s;"
