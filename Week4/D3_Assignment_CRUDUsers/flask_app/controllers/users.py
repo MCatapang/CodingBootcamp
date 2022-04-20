@@ -1,6 +1,8 @@
 # ------------------------IMPORTS------------------------ #
 from flask_app import app
 from flask_app.models.user import User
+# The line of code below is a tentative addition. May break code.
+from flask_app.models.club import Club
 from flask import render_template, redirect, request, session, flash
 
 
@@ -19,7 +21,9 @@ def user_all():
 # USER PAGE: CREATE
 @app.route("/users/new")
 def user_new():
-    return render_template("create.html")
+    clubs = Club.get_all()
+    # Line of code below is tentative
+    return render_template("create.html", all_clubs = clubs)
 
 # USER PAGE: EDIT
 @app.route("/users/<int:id>/edit")
