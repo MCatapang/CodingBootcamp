@@ -15,6 +15,12 @@
             <input type="text" name="last_name">
             <label for="email" >Email:</label>
             <input type="text" name="email">
+            <label for="club_id">Restaurant ID:</label>
+            <select name="club_id">
+                {% for club in all_clubs %}
+                <option value={{club.id}}>{{club.name}}</option> 
+                {% endfor %}
+            </select>
             <input type="submit" value="Add User">
         </form>
 </body>
