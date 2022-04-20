@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>New Ninja</title>
+</head>
+<body class="ninjasHTML">
+    <h1>New Ninja</h1>
+    <form action="/ninjas/create" method="POST" class="formAlign">
+        <p>
+            <label for="dojo_id">Dojo: </label>
+            <select name="dojo_id">
+                {% for dojo in all_dojos %}
+                <option value="{{dojo.id}}">{{dojo.name}}</option>
+                {% endfor %}
+            </select>
+        </p>
+        <p>
+            <label for="first_name">First Name: </label>
+            <input type="text" name="first_name">
+        </p>
+        <p>
+            <label for="last_name">Last Name: </label>
+            <input type="text" name="last_name">
+        </p>
+        <p>
+            <label for="age">Age: </label>
+            <input type="text" name="age">
+        </p>
+        <p>
+           <input type="submit" value="Create">
+        </p>
+    </form>
+    <p><a href="/dojos">Home</a></p>
+</body>
+</html>

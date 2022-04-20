@@ -1,0 +1,26 @@
+/* ----------------DOJOS.HTML---------------- */
+.dojosHTML {
+    display: flex;
+    justify-content: space-evenly;
+}
+.listOfDojos {
+    display: inline;
+}
+
+
+/* ----------------DOJO_SHOW.HTML---------------- */
+.dojoShowHTML {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* ----------------NINJAS.HTML---------------- */
+.ninjasHTML {
+    text-align: left;
+}
+.formAlign {
+    text-align: left;
+    display: block;
+}
