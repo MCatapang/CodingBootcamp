@@ -32,7 +32,7 @@ class User:
     # USER: CREATE
     @classmethod
     def save(cls, data):
-        query = "INSERT INTO users (first_name, last_name, email, created_at, updated_at) VALUES (%(first_name)s, %(last_name)s, %(email)s, NOW(), NOW());"
+        query = "INSERT INTO users (first_name, last_name, email, club_id, created_at, updated_at) VALUES (%(first_name)s, %(last_name)s, %(email)s, %(club_id)s, NOW(), NOW());"
         return connectToMySQL('users_schema').query_db(query, data)
 
     # USER: EDIT
