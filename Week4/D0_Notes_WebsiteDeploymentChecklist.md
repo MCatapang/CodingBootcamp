@@ -9,22 +9,22 @@
 
 ## **EVERYTIME PROCESS**
 1. Create the following project folder structure:
-    - [Project Folder Name (e.g., ***D3_Assignment_CrudUsers***)]
-        - ***server.py***
-        - ***flask_app***
-            - ***\_\_init\_\_.py***
-        - ***config***
-            - ***mysqlconnection.py***
-        - ***controllers***
-            - [Plural Database Table Name (e.g., ***users***)]***.py***
-        - ***models***
-            - [Singular Database Table Name (e.g., ***user***)]***.py***
-        - ***static***
-            - ***css***
-            - ***images***
-            - ***javascript***
-        - ***templates***
-            - [Any HTML Needed]
+    - [ ] [Project Folder Name (e.g., ***D3_Assignment_CrudUsers***)]
+        - [ ] ***server.py***
+        - [ ] ***flask_app***
+            - [ ] ***\_\_init\_\_.py***
+            - [ ] ***config***
+                - [ ] ***mysqlconnection.py***
+            - [ ] ***controllers***
+                - [ ] [Plural Database Table Name (e.g., ***users***)]***.py***
+            - [ ] ***models***
+                - [ ] [Singular Database Table Name (e.g., ***user***)]***.py***
+            - [ ] ***static***
+                - [ ] ***css***
+                - [ ] ***images***
+                - [ ] ***javascript***
+            - [ ] ***templates***
+                - [ ] [Any HTML Needed]
 
 2. Paste the following boilerplate codes in your files:
     - [ ] ***server.py***
