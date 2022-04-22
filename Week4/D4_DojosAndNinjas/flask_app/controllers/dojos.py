@@ -23,16 +23,15 @@ def ninjas_in_dojo(id):
     data = {
         "id": id,
     }
-    one_dojo = Dojo.get_one(data)
-    ninjas = Ninja.get_all(data)
-    return render_template("dojo_show.html", dojo = one_dojo, some_ninjas = ninjas)
+    dojo = Dojo.get_dojo_has_ninjas(data)
+    return render_template("dojo_show.html", dojo=dojo)
 
 
 
 # ------------------------POST ROUTES------------------------ #
 # DOJO: CREATE
 @app.route("/dojos/create", methods=["POST"])
-def dojosCreate():
+def create_dojo():
     data = {
         "name": request.form["name"]
     }
