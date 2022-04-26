@@ -1,0 +1,68 @@
+/* ----------------IMPORTS---------------- */
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+
+
+/* ----------------ELEMENTS---------------- */
+body {
+    font-family: 'Sora', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+}
+h1 {
+    margin: 0px 0px 20px 0px;
+}
+h1.registerTheme {
+    color: paleturquoise;
+}
+h1.loginTheme {
+    color: lightgreen;
+}
+label, input {
+    display: block;
+}
+label {
+    color: whitesmoke;
+    margin: 0px 0px 4px 0px;
+}
+input {
+    width: 98%;
+    height: 30px;
+    border-radius: 4px;
+    margin: 0px 0px 40px 0px;
+}
+
+
+/* ----------------CLASSES---------------- */
+.container {
+    width: 400px;
+    padding: 20px 20px 1px 20px;
+    border-radius: 4px;
+    background-color: rgb(33, 33, 33);
+}
+.registerTheme {
+    width: 20%;
+    height: 30px;
+    font-family: 'Sora';
+}
+input.registerTheme {
+    font-size: 95%;
+    background-color: paleturquoise;
+}
+.loginTheme {
+    width: 20%;
+    height: 30px;
+    font-family: 'Sora';
+}
+input.loginTheme {
+    font-size: 95%;
+    background-color: lightgreen;
+}
+.errorMessage {
+    color: palevioletred;
+}
+.logoutButton {
+    font-size: 95%;
+    font-family: 'Sora';
+    background-color: palevioletred;
+    border-radius: 8px;
+}
