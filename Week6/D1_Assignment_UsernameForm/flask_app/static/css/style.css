@@ -1,0 +1,35 @@
+/* ----------------ELEMENTS---------------- */
+body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    vertical-align: bottom;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    background-color: whitesmoke;
+}
+input, label {
+    display: flex;
+    justify-self: center;
+}
+input {
+    margin: 0px 0px 20px 0px;
+}
+table {
+    margin: 0px auto;
+    background-color: darkblue;
+    border-collapse: collapse;
+}
+
+
+
+/* ----------------CLASSES---------------- */
+.contentArea {
+    width: 400px;
+    margin: 100px 0px;
+    padding: 20px;
+    background-color: rgb(33, 33, 33);
+    border-radius: 8px;
+    text-align: center;
+}
