@@ -3,18 +3,18 @@
 
 
 // // Problem 1
-    // // Original
-    // console.log(hello);
-    // var hello = 'world';
+//     // Original
+//     console.log(hello);
+//     var hello = 'world';
 
-    // // Interpreted
-    // var hello; // the variable is initialized as undefined
-    // console.log(hello);
-    // hello = 'world'
+//     // Interpreted
+//     var hello; // the variable is initialized as undefined
+//     console.log(hello);
+//     hello = 'world'
     
-    // // Predicted Output:
-    // // undefined
-    // // world
+//     // Predicted Output:
+//     // undefined
+//     // world
 
 
 
@@ -134,19 +134,121 @@
 
 
 
-// Problem 6
+// // Problem 6
+//     // Original
+//     console.log(genre);
+//     var genre = "disco";
+//     rewind();
+//     function rewind() {
+//         genre = "rock";
+//         console.log(genre);
+//         var genre = "r&b";
+//         console.log(genre);
+//     }
+//     console.log(genre);
+
+//     // Interpreted
+//     var genre;
+//     console.log(genre);
+//     genre = "disco";
+//     rewind();
+//     function rewind() {
+//         var genre;
+//         genre = "rock";
+//         console.log(genre);
+//         genre = "r&b";
+//         console.log(genre);
+//     }
+//     console.log(genre);
+
+//     // Predicted Output
+//     // undefined
+//     // rock
+//     // r&b
+//     // disco
+
+
+
+
+// // Problem 7
+//     // Original
+//     dojo = "san jose";
+//     console.log(dojo);
+//     learn();
+//     function learn() {
+//         dojo = "seattle";
+//         console.log(dojo);
+//         var dojo = "burbank";
+//         console.log(dojo);
+//     }
+//     console.log(dojo);
+
+//     // Interpreted
+//     dojo = "san jose";
+//     console.log(dojo);
+//     learn();
+//     function learn() {
+//         var dojo;
+//         dojo = "seattle";
+//         console.log(dojo);
+//         dojo = "burbank";
+//         console.log(dojo);
+//     }
+//     console.log(dojo);
+
+//     // Predicted Output
+//     // san jose
+//     // seattle
+//     // burbank
+//     // san jose
+
+
+
+
+// Problem 8
     // Original
-    console.log(genre);
-    var genre = "disco";
-    rewind();
-    function rewind() {
-        genre = "rock";
-        console.log(genre);
-        var genre = "r&b";
-        console.log(genre);
+    console.log(makeDojo("Chicago", 65));
+    console.log(makeDojo("Berkeley", 0));
+    function makeDojo(name, students) {
+        const dojo = {};
+        dojo.name = name;
+        dojo.students = students;
+        if(dojo.students > 50) {
+            dojo.hiring = true;
+        }
+        else if(dojo.students <= 0) {
+            dojo = "closed for now";
+        }
+        return dojo
     }
-    console.log(genre);
 
     // Interpreted
-    var genre;
-    console.log
+    console.log(makeDojo("Chicago", 65));
+    function makeDojo(name, students) {
+        const dojo = {};
+        dojo.name = name;
+        dojo.students = students;
+        if(dojo.students > 50) {
+            dojo.hiring = true;
+        }
+        else if(dojo.students <= 0) {
+            dojo = "closed for now";
+        }
+        return dojo
+    }
+    console.log(makeDojo("Berkeley", 0));
+    function makeDojo(name, students) {
+        const dojo = {};
+        dojo.name = name;
+        dojo.students = students;
+        if(dojo.students > 50) {
+            dojo.hiring = true;
+        }
+        else if(dojo.students <= 0) {
+            dojo = "closed for now";
+        }
+        return dojo
+    }
+
+    // Predicted Output
+    // TypeError: Assignment to Constant Variable       // dojo is a constant; it's cant be redeclared; it's a dictionary, however, so its key-value pair can be modified.
