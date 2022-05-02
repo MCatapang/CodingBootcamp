@@ -100,36 +100,36 @@
 
 
 
-// Problem 5
-    // Original
-    mean();
-    console.log(food);
-    var mean = () => {
-        food = "chicken";
-        console.log(food);
-        var food = "fish";
-        console.log(food);
-    }
-    console.log(food);
+// // Problem 5
+//     // Original
+//     mean();
+//     console.log(food);
+//     var mean = () => {
+//         food = "chicken";
+//         console.log(food);
+//         var food = "fish";
+//         console.log(food);
+//     }
+//     console.log(food);
 
-    // Interpreted
-    var mean;
-    mean();
-    console.log(food);
-    mean = function() {
-        var food;
-        food = "chicken";
-        console.log(food);
-        food = "fish";
-        console.log(food);
-    }
-    console.log(food);
+//     // Interpreted
+//     var mean;
+//     mean();
+//     console.log(food);
+//     mean = function() {
+//         var food;
+//         food = "chicken";
+//         console.log(food);
+//         food = "fish";
+//         console.log(food);
+//     }
+//     console.log(food);
 
-    // Predicted Output
-    // undefined
-    // chicken
-    // fish
-    // undefined
+//     // Predicted Output
+//     // undefined
+//     // chicken
+//     // fish
+//     // undefined
 
 
 
@@ -148,3 +148,5 @@
     console.log(genre);
 
     // Interpreted
+    var genre;
+    console.log
