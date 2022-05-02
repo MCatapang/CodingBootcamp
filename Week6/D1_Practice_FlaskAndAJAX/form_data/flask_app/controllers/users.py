@@ -15,6 +15,3 @@ def users():
 def create_user():
     
     pass
-
-
-
