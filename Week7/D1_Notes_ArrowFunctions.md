@@ -49,7 +49,7 @@
 	```
 
 
-##### Context Inheritance
+##### Context Inheritance (NOTES TAKEN WRONG?)
 - As previously studied, **scope** is the "accessibility of information to a particular section of code" ([[D1_Notes_ArrowFunctions]]).
 - Arrow functions allow you to inherit context from the parent scope so that you can access certain information within the child arrow function.
 	- `this` in the traditional function below won't be able to access the `Deck` class because inside the `for` loop, `this` is locally defined so `this` refers to the loop
@@ -77,12 +77,11 @@
 	      const suits = ['Diamond', 'Heart', 'Spade', 'Club'];
 	      const faces = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King'];
 	      const deck = [];
-	      suits.forEach(function(suit) {
-	        faces.forEach(function(face) {
-	          deck.push(this.createCard(suit, face));
-	        });
-	      });
-	      this.deck = deck;
+	      suits.forEach(suit => {
+	      faces.forEach(face => {
+	        deck.push(this.createCard(suit, face));
+	      });
+	    });
 	    }
 	}
 	```
