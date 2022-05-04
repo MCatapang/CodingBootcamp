@@ -29,7 +29,7 @@
 	};
 	// will get refactored into...
 	const square = (n) => {
-		n*n
+		return n*n  // the return keyword is still utilized because brackets are still utilized
 	};
 	// or, as a more concise refactoring, ...
 	const square = (n) => n*n;
@@ -40,8 +40,8 @@
 	// the second set of brackets create the object literal
 	const returnObjLonghand = () => {
 		return {
-			firstName: 'John';
-			lastName: 'Wick';
+			firstName: 'John',
+			lastName: 'Wick'
 		}
 	}
 	// when shorthanding it, however, you use a pair of parenthesis and brackets
