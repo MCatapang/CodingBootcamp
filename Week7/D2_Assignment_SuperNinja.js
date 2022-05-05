@@ -1,19 +1,19 @@
+// NINJA CLASS
 class Ninja {
+    // -------------------------------- Constructor
     constructor(name, health, speed, strength) {
         this.ninjaName = name;
         this.ninjaHealth = health;
         this.ninjaSpeed = speed || 3;
         this.ninjaStrength = strength || 3;
     }
-
+    // -------------------------------- Class Methods
     sayName() {
         console.log(this.ninjaName);
     }
-
     showStats() {
         console.log(`${this.ninjaName} has ${this.ninjaHealth} health, ${this.ninjaSpeed} speed, and ${this.ninjaStrength} strength`);
     }
-
     drinkSake() {
         this.ninjaHealth += 10;
         console.log(`${this.ninjaName} now has ${this.ninjaHealth} health`);
@@ -21,15 +21,17 @@ class Ninja {
     }
 }
 
+// NINJA SUBCLASS: SENSEI
 class Sensei extends Ninja {
+    // -------------------------------- Constructor
     constructor(name, wisdom) {
         super(name, 200, 10, 10);
         this.senseiWisdom = wisdom || 10;
     }
-
+    // -------------------------------- Class Methods
     speakWisdom() {
         super.drinkSake();
-        console.log("A wise message");
+        console.log("A very very wise message");
     }
 }
 
