@@ -35,7 +35,9 @@ class Sensei extends Ninja {
     }
 }
 
-// FUNCTION CALLS
+// INSTANTIATION 
 const masterPikachu = new Sensei("Master Pikachu");
+
+// FUNCTION CALLS
 console.log(masterPikachu);
 masterPikachu.speakWisdom();
