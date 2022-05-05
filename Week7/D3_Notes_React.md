@@ -103,7 +103,7 @@
 	// ADVANCED REACT COMPONENT (WITH JSX)
 	import React, { Component } from 'react';
 	
-	class MyNewComponent extends Component{}
+	class MyNewComponent extends Component{
 		render() {
 			return(
 				<div>
