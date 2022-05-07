@@ -194,6 +194,37 @@
 	export default App;
 	```
 
+
+### Synthetic Events
+- ==**Synthetic Events**==:  React's event system similar to JavaScript's event listeners
+- There are a couple of things to keep in mind about React's synthetic event system:
+	1. Event names are camelCased (e.g., `onClick` with React, – not `onclick` like in JavaScript)
+	2. Returning false will not work; you need to manually call `even.stopPropagation()` or `event.preventDefault()` 
+	3. Events cannot be called asynchronously because of how React "pools" the Synthetic events
+- Some kinds of synthetic events include:
+	- `onChange`: an event that runs when a form input is changed
+	- `onSubmit`: an event that runs when a form is submitted
+	- `onFocus`: an event that is run when an element is given focus (clicked on or tabbed to)
+	- `onBlur`: an even thtat is run when an element loses focus (the user clicked away)
+	- Etc. (more info on [reactjs.org](https://reactjs.org/docs/events.html#supported-events))
+- E.g., "App.js" with a synthetic event:
+	```js
+	// "App.js" with a synthetic event
+	import React from 'react';
+	import './App.css';
+		
+	function App() {
+	  return (
+		<button onClick={ () => alert("This button has been clicked!") }>
+			Click Me!
+		</button>
+	  );
+	}
+	
+	export default App;
+	```
+
+
 ## React App: Walkthrough
 ### Creation (Utilizing JSX)
 1. Point your terminal in your target folder where you want to create your project folder, and run `npx create-react-app your-project-name-here` as a command in your terminal
@@ -203,17 +234,8 @@
 	-  The folder structure for our React app as given by the webkit is as follows: ![Folder Structure|400](https://s3.amazonaws.com/General_V88/boomyeah2015/codingdojo/curriculum/content/chapter/react-project-structure.PNG) 
 	- `src/index.js` is the entry point in our React project
 		- This is where we call `ReactDOM.render` and send in our main `<App />` component
-2. Create a "components" folder under `project-name-here/src` and create a "components" folder
-	- All components will be placed inside this folder
-	- You can think of a component as a `div` that contains all of the styling and JavaScript that it needs
-3. Create your components
-4.  Modify your "App.js" located at `project-name-here/src` accordingly
-5. (**HIGHLY RECOMMENDED**) Utilize JSX in your components and "App.js"
-	- E.g., "MyNewComponent.jsx" (with `props`)
-
-	- E.g., "App.js" (with props)
-
-	- The data flow in React flows downward, so props can be used to pass data down from component to component
+2. Create your components
+3.  Modify your "App.js" located at `project-name-here/src` accordingly
 
 ### Deployment
 1. Run `npm start`  in Terminal
