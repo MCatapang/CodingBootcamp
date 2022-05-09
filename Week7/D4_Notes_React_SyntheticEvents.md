@@ -3,6 +3,7 @@
 ```toc
 ```
 ---
+
 ## Defining Synthetic Events
 - ==**Synthetic Events**==:  React's event system similar to JavaScript's event listeners
 - There are a couple of things to keep in mind about React's synthetic event system:
