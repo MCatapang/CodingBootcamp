@@ -3,6 +3,7 @@
 ```toc
 ```
 ---
+
 ## Defining State
 - ==`state`==: a variable that alllows components in React to hold onto their own information
 - e.g., a light switch
