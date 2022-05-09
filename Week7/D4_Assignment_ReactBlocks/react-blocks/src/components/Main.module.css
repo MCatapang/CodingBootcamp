@@ -1,0 +1,10 @@
+.main {
+    width: 590px;
+    height: 670px;
+    background-color: palevioletred;
+    margin: 10px 10px 10px 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
