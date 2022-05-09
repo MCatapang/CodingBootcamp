@@ -3,7 +3,7 @@ class Ninja {
     // -------------------------------- Constructor
     constructor(name, health, speed, strength) {
         this.ninjaName = name;
-        this.ninjaHealth = health;
+        this.ninjaHealth = health || 100;
         this.ninjaSpeed = speed || 3;
         this.ninjaStrength = strength || 3;
     }
@@ -25,7 +25,7 @@ class Ninja {
 class Sensei extends Ninja {
     // -------------------------------- Constructor
     constructor(name, wisdom) {
-        super(name, 200, 10, 10);
+        super(name);
         this.senseiWisdom = wisdom || 10;
     }
     // -------------------------------- Class Methods
