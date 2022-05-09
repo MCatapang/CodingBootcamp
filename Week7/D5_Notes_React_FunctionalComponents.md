@@ -19,7 +19,7 @@
 ## Defining Functional Component
 - ==Functional Component==: a component that consists of functions instead of classes, dissimilar to Class Components
 	```js
-	// "PersonCard.js"
+	// "PersonCard.jsx"
 	import React from 'react';
 	
 	const PersonCard = props => {
