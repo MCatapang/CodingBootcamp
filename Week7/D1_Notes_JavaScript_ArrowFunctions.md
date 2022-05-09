@@ -1,6 +1,10 @@
 # Arrow Functions
 ---
-##### Benefits of Arrow Functions
+```toc
+```
+---
+
+## Benefits of Arrow Functions
 - Functions can be concise and one-liners
 	```js
 	const sayHello = (name) => console.log('Hello ${name}')
@@ -8,7 +12,11 @@
 	- This is due to the removal of the [[#function Keyword]] and [[#return Keyword]].
 
 
-##### `function` Keyword
+---
+
+## Keywords in Arrow Functions
+
+### `function` Keyword
 - In arrow functions, the `function` keyword is ommitted.
 	```js
 	var sayHello = function(name) {
@@ -20,8 +28,7 @@
 	}
 	```
 
-
-##### `return` Keyword
+### `return` Keyword
 - Functions implicitly return; the `return` keyword is ommitted as well.
 	```js
 	var square = function(n) {
@@ -49,8 +56,10 @@
 	```
 
 
-##### Context Inheritance (NOTES TAKEN WRONG?)
-- As previously studied, **scope** is the "accessibility of information to a particular section of code" ([[D1_Notes_ArrowFunctions]]).
+---
+
+## Context Inheritance (NOTES TAKEN WRONG?)
+- As previously studied, **scope** is the "accessibility of information to a particular section of code" ([[D1_Notes_JavaScript_ArrowFunctions]]).
 - Arrow functions allow you to inherit context from the parent scope so that you can access certain information within the child arrow function.
 	- `this` in the traditional function below won't be able to access the `Deck` class because inside the `for` loop, `this` is locally defined so `this` refers to the loop
 	```js

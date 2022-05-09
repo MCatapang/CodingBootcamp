@@ -1,14 +1,16 @@
 # Rest / Spread
 ---
-##### The `...` Operator
+```toc
+```
+---
+
+## The `...` Operator
 - ES6 provides us with the operator, `...`, which is context dependent.
 - It can either:
 	- Capture the `rest` of a data set; or
 	- Get the contents of a data set to `spread`.
 
-
-
-##### The `rest` Operator
+### The `rest` Operator
 - Typically used as a parameter to denote the rest of a data set
 	- e.g., 
 	```js
@@ -48,8 +50,7 @@
 	```
 - Must be the last parameters of a function. ([source](https://www.javascripttutorial.net/es6/javascript-spread/))
 
-
-##### The `spread` Operator
+### The `spread` Operator
 - Used in order to spread the data from a dataset (i.e., access multiple data from a data set)
 	- e.g., 
 	```js

@@ -1,10 +1,14 @@
 # Big O Notation
 ---
-##### Defining Big O
-- **Big O**: a plot of the ubber bound of how long a algorithm should take to run versus how big the problm is
+```toc
+```
+---
+
+## Defining Big O
+- ==Big O==: a plot of the ubber bound of how long a algorithm should take to run versus how big the problm is
 	- a way to represent roughly how long it will take our function to run
-	- **N**: size of the function (i.e., number of operations)
-		- e.g., the function below would run in ==O(1)== time because it only had 1 operation (the return)
+	- ==N==: size of the function (i.e., number of operations)
+		- e.g., the function below would run in **O(1)** time because it only had 1 operation (the return)
 		```js
 		function smallest( sortedArr ) {
 		    return sortedArr[0];

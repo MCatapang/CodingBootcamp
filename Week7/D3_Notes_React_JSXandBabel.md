@@ -1,5 +1,9 @@
 # JSX && Babel
 ---
+```toc
+```
+---
+
 ## Defining JSX 
 - **JSX**: (JavaScript XML) A syntax extension of JavaScript that allows us to directly write HTML in React within JavaScript code
 	- JSX can't be interpreted out of the box
@@ -17,7 +21,7 @@
 		return React.createElement("h1", {}, "Our First React page has rendered");
 	}
 	ReactDom.render( App(), document.GetElementByID("root") );
-```
+	```
 - JSX -> Babel -> JavaScript
 	```js
 	ReactDOM.render(
@@ -32,12 +36,12 @@
 		), 
 		document.getElementById("root") 
 	);
-```
+	```
 - JSX
 	```js
 	const App = () => <h1>Our First React page has rendered</h1>;
 	ReactDOM.render(<App></App>, document.getElementById("root"));
-```
+	```
 
 
 ## Using JSX

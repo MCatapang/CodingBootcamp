@@ -1,7 +1,11 @@
 # Destructuring
 ---
-##### Defining Destructuring
-- **Destructuring**: "destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects into distinct variables."
+```toc
+```
+---
+
+## Defining Destructuring
+- ==Destructuring==: "destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects into distinct variables."
 	- i.e., you havae a data structure (e.g., array or object), and you want information to be its own variable.
 - For example:
 	```js
@@ -29,7 +33,7 @@
 - As seen in the example above with `const [firstAnimal, secondAnimal, thirdAnimal]`, we can extract multuple items at once with destructuring
 
 
-##### Name Conflicts
+## Destructuring Name Conflicts
 - There will be name conflicts if your current scope already has a variable possessing the same name as a property that you're trying to extract from an object. However this can be fixed:
 	- The example below:
 		```js
@@ -47,7 +51,7 @@
 		```
 
 
-##### Nested Destructuring
+## Nested Destructuring
 - Content will often be much more complex and destructuring will look more complex as a result.
 	- In the example below:
 		```js

@@ -1,19 +1,24 @@
 # Scope
 ---
-##### Defining **Scope**
-+ **Scope**: the accessibility of information (e.g., variables and functions) to a particular section of code
+```toc
+```
+---
+
+## Defining Scope
++ ==Scope==: the accessibility of information (e.g., variables and functions) to a particular section of code
 + e.g., ![Examples of Scope](https://s3.amazonaws.com/General_V88/boomyeah2015/codingdojo/curriculum/content/chapter/identify-scopes.png) 
 
+### Types of Scope
+- ==Global Scope==: allows information to be omnipresent within a JavaScript file
+- ==Local Scope==: restricts information to only a specific function
+- ==Block Scope==: restricts information to only a specific code block
 
-##### Types of Scope
-- **Global Scope**: allows information to be omnipresent within a JavaScript file
-- **Local Scope**: restricts information to only a specific function
-- **Block Scope**: restricts information to only a specific code block
 
+---
 
-##### `const` and `let` 
+## `const` and `let` 
 - Both of them:
-	- utilize **Block Scope** 
+	- utilize Block Scope 
 - But they differ in:
 	- `let` allows for reassignment, and does not require a value upon declaration
 	- `const` does not allow reassignment (i.e., immutable), and requires a value upon declaration
