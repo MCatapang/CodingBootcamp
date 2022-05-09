@@ -1,0 +1,49 @@
+h1, h2 { 
+    margin: 10px;
+    text-align: center;
+}
+h4 {
+    margin: 0px 0px 10px 10px;
+    color: palevioletred;
+}
+label {
+    width: 60%;
+    height: 30px;
+    margin: 10px;
+    padding: 10px;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+input {
+    height: 17.5px;
+    border-radius: 4px;
+    border-style: none;
+    margin: 0px 0px 0px 15px;
+    font-size: 15px;
+    color: gray;
+    border-width: 1px;
+    border-style: solid;
+    border-color: gray;
+}
+
+.form {
+    width: 600px;
+    margin: 20px auto;
+    color: gray;
+    background-color: #d2d2d2;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+.button {
+    width: 200px;
+    align-self: center;
+    font-size: 17.5px;
+    color: grey;
+    margin: 10px 0px 10px 0px;
+}
