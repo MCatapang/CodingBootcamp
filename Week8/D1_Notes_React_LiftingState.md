@@ -23,7 +23,6 @@
 		const handleSubmit = (e) => {
 			e.preventDefault();
 			props.onNewMessage(msg)
-			// what should we do with the message?
 		};
 		
 		return (
