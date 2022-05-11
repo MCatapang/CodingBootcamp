@@ -20,7 +20,9 @@
 
 ### Installation
 1. Run `npm install react-router-dom@5` inside your **project-folder**.
-2. Modify your **App.js**
+
+### Utilization
+1. Modify your **App.js**
 	```js
 	import React from "react";
 	import {BrowserRouter, Switch, Route, Link} from "react-router-dom";
@@ -68,7 +70,7 @@
 		- `exact path` is utilized for routes that utilize only "`/`" as its path due to how just using `path` would allow the route's component to render on any path that has "`/`" in it.
 		- `path` must match `to` in Link
 	- `Element` for each `Route` tag refers to the target Component
-1. Modify your **Component.jsx** as needed:
+2. Modify your **Component.jsx** as needed:
 	```jsx
 	import React from "react";
 	import {useParams} from 'react-router-dom';
@@ -94,3 +96,24 @@
 	export default Input;
 	```
 	- Utilize `useParams()` if needed
+
+
+---
+
+## Additional: useNavigate()
+- In order to utilize this:
+	1. Import the dependency
+	```jsx
+	import {useNavigate} from "react-router-dom";
+	```
+	2. Instantiate inside the function before return
+	```jsx
+	const navigate = useNavigate();
+	```
+	3. To redirect, use:
+	```jsx
+	const submitHandler = (e) => {
+		e.preventDefault();
+		navigate('/thisismy/url');
+	}
+	```
