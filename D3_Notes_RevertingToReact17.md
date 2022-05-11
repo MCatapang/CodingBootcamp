@@ -27,6 +27,7 @@
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		```
+
 2. Update **index.js** inside your **src** folder
 	- Replace: 
 	```js
@@ -36,3 +37,25 @@
 	```js
 	import ReactDom from 'react-dom';
 	```
+	- Replace the below:
+	```js
+	const root = ReactDOM.createRoot(document.getElementById('root')); 
+	root.render( 
+	    <React.StrictMode> 
+	    	<App /> 
+	    </React.StrictMode> 
+	);
+	```
+	- With the below:
+	```js
+	ReactDOM.render( 
+	    <React.StrictMode> 
+	    	<App /> 
+	    </React.StrictMode>, 
+	    document.getElementById('root') 
+	);
+	```
+
+3. Reinstall **node_modules**
+	- Run `npm install`
+	- It will pick up the modified `package.json` from Step 1 and install React 17
