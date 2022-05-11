@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import './App.css';
 
@@ -24,10 +24,12 @@ function App() {
         .then( response => setPokemons(response.data.results) )
         .catch( err => console.log(err) ); 
     };
+    useEffect( axiosFetchPokemon, []);
+    
 
     return (
         <>
-            <button type="submit" onClick={axiosFetchPokemon}>See All Pokemon!</button>
+            <button type="submit" onClick={useEffect}>See All Pokemon!</button>
             <ul>
                 {pokemons.map( (pokemon, idx) => 
                     <li key={idx}>{pokemon.name}</li>
