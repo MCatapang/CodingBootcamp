@@ -11,7 +11,6 @@ const Results = (props) => {
     useEffect( () => {
         axios.get(`https://swapi.dev/api/${category}/${id}`)
             .then( result => setNeededInfo(result.data))
-            .then( console.log(neededInfo) )
             .catch( error => console.log(error));
     }, [neededInfo]);
 
