@@ -19,9 +19,9 @@ const Results = (props) => {
                 console.log(err);
                 navigate("/error")
             });
-    }, [neededInfo]);
+    }, [category, id]);
 
-    // ------------------------------------------------Conditional Render
+    // ------------------------------------------------Conditional Render // TA Spencer: otentially refactor into just one `return`; set checks inside `return`
     if(neededInfo !== null) { 
         if(category == 'people') {
             return(
