@@ -1,19 +1,27 @@
+// ----------------------------------------------------Imports
 import React, {useState, useEffect} from 'react';
-import {useParams} from 'react-router-dom';
+import {useParams, useNavigate} from 'react-router-dom';
 import axios from 'axios';
 
+
+// ----------------------------------------------------Export
 const Results = (props) => {
-
-    const [neededInfo, setNeededInfo] = useState(null)
-
+    // ------------------------------------------------Constants
+    const [neededInfo, setNeededInfo] = useState(null);
     const {category, id} = useParams();
+    const navigate = useNavigate();
 
+    // ------------------------------------------------API
     useEffect( () => {
         axios.get(`https://swapi.dev/api/${category}/${id}`)
             .then( result => setNeededInfo(result.data))
-            .catch( error => console.log(error));
+            .catch( err => {
+                console.log(err);
+                navigate("/error")
+            });
     }, [neededInfo]);
 
+    // ------------------------------------------------Conditional Render
     if(neededInfo !== null) { 
         if(category == 'people') {
             return(
@@ -39,6 +47,9 @@ const Results = (props) => {
                 </>
             )
         }
+    }
+    if(neededInfo == null) {
+        return(<h1>Loading... uwu</h1>);
     }
 }
 

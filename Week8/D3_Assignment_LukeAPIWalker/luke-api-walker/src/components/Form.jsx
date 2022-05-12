@@ -1,19 +1,20 @@
-import React, {useState, useEffect} from 'react';
+// ----------------------------------------------------Imports
+import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
-import axios from 'axios';
 
+
+// ----------------------------------------------------Export
 const Form = (props) => {
-
+    // ------------------------------------------------Constants
     const [category, setCategory] = useState('people');
     const [id, setID] = useState(null);
-
     const navigate = useNavigate();
-
     const submitHandler = (e) => {
         e.preventDefault();
         navigate(`/${category}/${id}`);
     }
 
+    // ------------------------------------------------Conditional Render
     return(
         <form onSubmit={submitHandler}>
             <label htmlFor="people">
