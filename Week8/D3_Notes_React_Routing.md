@@ -19,7 +19,7 @@
 	- We will need to add this as a dependency for each project that needs routing.
 
 ### Installation
-1. Run `npm install react-router-dom@5` inside your **project-folder**.
+1. Run `npm install react-router-dom` inside your **project-folder**.
 
 ### Utilization
 1. Modify your **App.js**
