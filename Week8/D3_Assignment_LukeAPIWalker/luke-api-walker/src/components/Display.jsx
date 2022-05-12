@@ -15,18 +15,30 @@ const Results = (props) => {
     }, [neededInfo]);
 
     if(neededInfo !== null) { 
-        return(
-            <>
-                <h1>{neededInfo.name}</h1>
-                <ul>
-                    <li>{neededInfo.gender}</li>
-                    <li>{neededInfo.mass}</li>
-                    <li>{neededInfo.hair_color}</li>
-                </ul>
-            </>
-        )
-    } else {
-        <h1>Loading!</h1>
+        if(category == 'people') {
+            return(
+                <>
+                    <h1>Name: {neededInfo.name}</h1>
+                    <ul>
+                        <li>Gender: {neededInfo.gender}</li>
+                        <li>Mass: {neededInfo.mass}</li>
+                        <li>Hair Color: {neededInfo.hair_color}</li>
+                    </ul>
+                </>
+            )
+        } 
+        else if(category == 'planets') {
+            return(
+                <>
+                    <h1>Name: {neededInfo.name}</h1>
+                    <ul>
+                        <li>Climate: {neededInfo.climate}</li>
+                        <li>Terrain: {neededInfo.terrain}</li>
+                        <li>Surface Water: {neededInfo.surface_water}</li>
+                    </ul>
+                </>
+            )
+        }
     }
 }
 
