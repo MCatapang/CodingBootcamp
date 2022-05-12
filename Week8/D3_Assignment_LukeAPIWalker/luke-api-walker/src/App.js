@@ -1,3 +1,4 @@
+// ----------------------------------------------------Imports
 import Display from './components/Display';
 import Error from './components/Error';
 import Form from './components/Form';
@@ -5,6 +6,8 @@ import {Route, Routes} from 'react-router-dom';
 import React from 'react';
 import './App.css';
 
+
+// ----------------------------------------------------Export
 const App = () => {
     return (
         <>
