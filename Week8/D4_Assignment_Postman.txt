@@ -1,0 +1,5 @@
+https://pokeapi.co/api/v2/pokemon/bulbasaur
+https://pokeapi.co/api/v2/pokemon/ivysaur
+https://pokeapi.co/api/v2/pokemon/venusaur
+https://pokeapi.co/api/v2/pokemon/charmander
+https://pokeapi.co/api/v2/pokemon/charmeleon
