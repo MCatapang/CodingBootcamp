@@ -1,7 +1,6 @@
 // ------------------------------------------------Declarations
 const mongoose = require('mongoose');
 const JokeSchema = new mongoose.Schema({
-    // _id: Number,
     setup: {
         type: String,
         required: [true, "Setup is required!"],
