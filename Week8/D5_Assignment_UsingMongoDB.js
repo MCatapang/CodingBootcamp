@@ -66,11 +66,8 @@
 // Get all students
     db.students.find()
 
-// Get all students from California
-    db.students.find({home_state: "CA"})
-
-// Get all students from Arizona
-    db.students.find({home_state: "AZ"})
+// Get all students from California or Washington
+    db.students.find({home_state: {$in: ["CA", "WA"]}})
 
 // Get all students with a lucky number greater than 3
     db.students.find({lucky_number: {$gt: 3}})
