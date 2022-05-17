@@ -23,7 +23,6 @@ const Form = (props) => {
     return(
         <form className={styles.form} onSubmit={submitHandler}>
             <h1>Product Manager</h1>
-            {/* {JSON.stringify(title)} // {JSON.stringify(price)} // {JSON.stringify(description)} */}
             <label htmlFor="title">
                 Product Title:
                 <input type="text" placeholder="My Product" value={title} onChange={ (e) => setTitle(e.target.value)} />
