@@ -5,6 +5,12 @@ import axios from 'axios';
 const ProductList = (props) => {
     // --------------------------------------------------------Declarations
     const [ProductList, setProductList] = useState(null);
+    const deleteHandler = (id) => {
+        console.log(id);
+        axios.delete(`http://localhost:8000/api/products/delete/${id}`,)
+            .then( console.log(`Successfully deleted the product with an id of ${id}!`) )
+            .catch( err => console.log("The product wasn't deleted! Err: " + err ) )
+    }
 
     useEffect( () => {
         axios.get('http://localhost:8000/api/products')
@@ -22,6 +28,8 @@ const ProductList = (props) => {
                             <Link to={`/api/products/show/${oneProduct._id}`}>
                                 {oneProduct.title}
                             </Link>
+                            &nbsp;
+                            <button onClick={ (e) => deleteHandler(oneProduct._id) }>Delete</button>
                         </li>
                     )
                 })}

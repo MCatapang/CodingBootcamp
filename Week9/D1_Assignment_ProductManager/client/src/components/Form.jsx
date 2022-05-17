@@ -13,7 +13,6 @@ const Form = (props) => {
     const submitHandler = (e) => {
         e.preventDefault();
         const newProduct = {title: title, price: price, description: description};
-        console.log(newProduct);
         axios.post('http://localhost:8000/api/products/new', newProduct)
             .then( res => console.log("Successfully created a product!", res.data) )
             .catch( err => console.log("Something went wrong! Error:", err ) )
