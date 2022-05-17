@@ -15,9 +15,9 @@ module.exports.findAllProducts = (req, res) => {
 }
 
 module.exports.findOneSingleProduct = (req, res) => {
-    Product.create({ _id: req.params.id })
+    Product.find({ _id: req.params.id })
         .then(oneSingleProduct => res.json({ Product: oneSingleProduct }))
-        .catch(err => res.json({ message: 'Something went wrong', error: err }));
+        .catch(err => res.json({ message: 'Could not retrieve the specific product you are looking for', error: err }));
 }
 
 module.exports.updateExistingProduct = (req, res) => {
