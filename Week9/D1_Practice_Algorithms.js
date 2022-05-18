@@ -22,7 +22,11 @@ const doggoEntries = Object.entries(doggo);
 const doggoProperty = doggo.hasOwnProperty("favFood");
 // console.log(doggoProperty);
 
+for(keys in doggo) {
+    console.log(keys);
+}
 
+// obj1.__proto__ = obj2;
 
 
 
