@@ -47,3 +47,7 @@ button:active {
     border-style: inset;
     transition: 0s;
 }
+
+.error {
+    color: red;
+}
