@@ -7,8 +7,7 @@
 ## Basic Steps
 1. `mkdir myNewProject` && `cd myNewProject`
 2. `touch .gitignore`
-	3. Type 'node_modules' in your '.gitignore'
-5. `npx create-react-app client` && `cd client`
+3. `npx create-react-app client` && `cd client`
 	1. `npm install axios react-router-dom`
 	2. `cd src`
 		1. `mkdir components` && `cd components`
@@ -17,12 +16,40 @@
 	3. (OPTIONAL) `npm start`
 	4. `cd ..`
 	5. `cd ..`
-7. `mkdir server` && `cd server`
+4. `mkdir server` && `cd server`
 	1. `touch server.js`
 	2. `npm init -y`
 	3. `npm install express mongoose cors`
 	4. `mkdir config controllers models routes`
 	5. Create **mongoose.config.js**, **user.controllers.js**, **user.model.js**, **user.routes.js** in their individual folders
+
+---
+
+# .gitignore
+```gitignore
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+```
+
 
 ---
 
@@ -54,6 +81,26 @@
 	// ------------------------------------------------Export
 	export default App;
 	```
+- **index.jsx**
+```js
+	import React from 'react';
+	import ReactDOM from 'react-dom/client';
+	import './index.css';
+	import App from './App';
+	import reportWebVitals from './reportWebVitals';
+	import { BrowserRouter } from 'react-router-dom';
+	
+	const root = ReactDOM.createRoot(document.getElementById('root'));
+	root.render(
+		<React.StrictMode>
+			<BrowserRouter>
+				<App />
+			</BrowserRouter>
+		</React.StrictMode>
+	);
+	
+	reportWebVitals();
+```
 - **Display.jsx** (component)
 	```jsx
 	// ------------------------------------------------Imports
