@@ -167,106 +167,129 @@ yarn-error.log*
 ## Server Files
 - **mongoose.config.js**
 	```js
-	// ------------------------------------------------Declarations
+	// ----------------------------------------------------------------Declarations
 	const mongoose = require('mongoose');
 	
-	// ------------------------------------------------Connection to DB
+	
+	// ----------------------------------------------------------------Connection to DB
 	module.exports = (DB) => {
 		mongoose.connect(`mongodb://localhost/${DB}`, {
 			useNewUrlParser: true,
 			useUnifiedTopology: true
 		})
-		.then( () => console.log(`Successfully established a connection to the database, ${DB}`) )
-		.catch( (err) => console.log(`Something went wrong when connecting to the database, ${DB}`, err) )
+			.then( () => console.log(`Successfully established a connection to the database, ${DB}`) )
+			.catch( (err) => console.log(`Something went wrong when connecting to the database, ${DB}`, err) )
 	}
 	```
 - **user.controllers.js**
 	```js
-	// ------------------------------------------------Declarations
-	const User = require('../models/user.model');
+	// ----------------------------------------------------------------Declaration
+	const Author = require('../models/Author.models');
+	  
 	
-	// ------------------------------------------------CRUD
-	module.exports.createNewUser = (req, res) => {
-		User.create(req.body)
-			.then(newlyCreatedUser => res.json({ user: newlyCreatedUser }))
-			.catch(err => res.json({ message: 'Somethign went wrong', error: err }));
-	}	
+	// ----------------------------------------------------------------Export: CRUD
+	module.exports = {
+		// ------------------------------------------------------------Export: CRUD - Create
+		createNewAuthor: (req, res) => {
+			Author.create(req.body)
+				.then(newlyCreatedAuthor => res.json({ Author: newlyCreatedAuthor }))
+				.catch(err => res.status(400).json(err));
+		},
 	
-	module.exports.findAllUsers = (req, res) => {
-		User.find()
-			.then(allDaUsers => res.json({ users: allDaUsers }))
-			.catch(err => res.json({ message: 'Something went wrong', error: err}));
-	}
+		// ------------------------------------------------------------Export: CRUD - Read (All)
+		findAllAuthors: (req, res) => {
+			Author.find()
+				.then(allDaAuthors => res.json({ Authors: allDaAuthors }))
+				.catch(err => res.status(400).json(err));
+		},
 	
-	module.exports.findOneSingleUser = (req, res) => {
-		User.create({ _id: req.params.id })
-			.then(oneSingleUser => res.json({ user: oneSingleUser }))
-			.catch(err => res.json({ message: 'Something went wrong', error: err }));
-	}
+		// ------------------------------------------------------------Export: CRUD - Read (One)
+		findOneSingleAuthor: (req, res) => {
+			Author.findById(req.params.id)
+				.then(oneSingleAuthor => res.json({ Author: oneSingleAuthor }))
+				.catch(err => res.status(400).json(err));
+		},
 	
-	module.exports.updateExistingUser = (req, res) => {
-		User.findOneAndUpdate(
-			{ _id: req.params.id },
-			req.body,
-			{ new: true, runValidators: true }
-		)
-			.then(updatedUser => res.json({ user: updatedUser }))
-			.catch(err => res.json({ message: 'Somethign went wrong', error: err}));
-	}
 	
-	module.exports.deleteAnExistingUser = (req, res) => {
-		User.deleteOne({ _id: req.params.id })
-			.then(result => res.json({ result: result }))
-			.catch(err => res.json({ message: 'Something went wrong', error: err}));
+		// ------------------------------------------------------------Export: CRUD - Update
+		updateExistingAuthor: (req, res) => {
+			Author.findOneAndUpdate(
+				{ _id: req.params.id },
+				req.body,
+				{ new: true, runValidators: true }
+			)
+				.then(oneSingleAuthor => res.json({ Author: oneSingleAuthor }))
+				.catch(err => res.status(400).json(err));
+		},
+
+		// ------------------------------------------------------------Export: CRUD - Delete
+		deleteAnExistingAuthor: (req, res) => {
+			Author.deleteOne({ _id: req.params.id })
+				.then(deleteConfirmation => res.json(deleteConfirmation))
+				.catch(err => res.status(400).json(err));
+		}
 	}
 	```
 - **user.model.js**
 	```js
-	// ------------------------------------------------Declarations
+	// ----------------------------------------------------------------Declarations
 	const mongoose = require('mongoose');
-	const UserSchema = new mongoose.Schema({
-		name: String,
-		age: Number
+	const AuthorSchema = new mongoose.Schema({
+		name: {
+			type: String,
+			required: [true, "Author name is required!"],
+			minlength: [3, "Author name must be at least 3 characters long!"]
+		}
 	}, {timestamps: true})
-	const User = mongoose.model('User', UserSchema);
-	
-	// ------------------------------------------------Export
-	module.exports = User;
+	const Author = mongoose.model('Author', AuthorSchema);
+
+
+	// ----------------------------------------------------------------Export
+	module.exports = Author;
 	```
 - **users.routes.js**
 	```js
-	// ------------------------------------------------Declaration
-	const UserController = require('../controllers/user.controller');
-	
-	// ------------------------------------------------Export
+	// ----------------------------------------------------------------Declaration
+	const AuthorController = require('../controllers/author.controllers');
+
+
+	// ----------------------------------------------------------------Export
 	module.exports = app => {
-	    app.get('/api/users', UserController.findAllUsers);
-	    app.get('/api/users/:id', UserController.findOneSingleUser);
-	    app.put('/api/users/:id', UserController.updateExistingUser);
-	    app.post('/api/users', UserController.createNewUser);
-	    app.delete('/api/users/:id', UserController.deleteAnExistingUser);
+		// ------------------------------------------------------------Export - Create
+		app.post('/api/authors', AuthorController.createNewAuthor);
+		// ------------------------------------------------------------Export - Read (All)
+		app.get('/api/authors', AuthorController.findAllAuthors);
+		// ------------------------------------------------------------Export - Read (One)
+		app.get('/api/authors/:id', AuthorController.findOneSingleAuthor);
+		// ------------------------------------------------------------Export - Update
+		app.put('/api/authors/:id', AuthorController.updateExistingAuthor);
+		// ------------------------------------------------------------Export - Delete
+		app.delete('/api/authors/:id', AuthorController.deleteAnExistingAuthor);
 	}
 	```
 - **server.js**
 	```js
-	// ------------------------------------------------Declarations
+	// ----------------------------------------------------------------Declarations
 	const express = require('express');
+	const cors = require('cors');
 	const app = express();
 	const PORT = 8000;
-	const DB = 'joke'
+	const DB = 'authors'
+
 	
-	// ------------------------------------------------Middleware
-	app.use(express.json(), express.urlencoded({extended:true}))
-	
-	// ------------------------------------------------Connection to Files
+	// ----------------------------------------------------------------Middleware
+	app.use(cors(), express.json(), express.urlencoded({extended:true}))
+
+
+	// ----------------------------------------------------------------Connection to Files
 	const config = require("./config/mongoose.config")
 	config(DB);
-	const routes = require("./routes/users.routes")
+	const routes = require("./routes/author.routes")
 	routes(app);
-	
-	
-	// ------------------------------------------------Server Initialization
+
+
+	// ----------------------------------------------------------------Server Initialization
 	app.listen(PORT, () => {
-		console.log(`Server is running on PORT ${8000}!`);
+	console.log(`Server is running on PORT ${8000}!`);
 	})
 	```
