@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+    font-family: 'Varela Round', sans-serif;
+}
+body {
+    min-width: 700px;
+}
+h1, h3 {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+/* NAVBAR */
+.navBar {
+    padding: 0px;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    background-color: #000000;
+    z-index: 2;
+    overflow: hidden;
+}
+.navBarTitle {
+    margin: 0px 0px 0px 20px;
+    font-size: 25px;
+    color: #ffffff;
+    text-decoration: none;
+}
+.navBarLink {
+    color: inherit;
+    text-decoration: none;
+}
+.navBarLink:hover {
+    color: #EF8354;
+    transition: 0.1s;
+}
+.navBarButtonContainer {
+    margin: 0px 20px 0px 0px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.navBarButton {
+    width: 75px;
+    height: 25px;
+    border-style: none;
+    border-radius: 8px;
+    font-size: 17px;
+    background-color: transparent;
+    color: #ffffff;
+    cursor: pointer;
+}
+.navBarButton:hover {
+    background-color: #ffffff;
+    color: #EF8354;
+    transition: 0.1s;
+}
+.navBarButton:active {
+    background-color: #EF8354;
+    color: #ffffff;
+}
+
+
+
+
+/* HOME AREA */
+.homeTitleContainer {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ea/-law-office.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.homeTitle {
+    margin: 30px 10px;
+    padding: 0px;
+    font-size: 75px;
+    text-align: center;
+    align-self: center;
+    color: white;
+    z-index: 1;
+    text-shadow: 2px 2px 8px #000000;
+}
+.colorOverlay {
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.7;
+    position: absolute;
+}
+.searchBar {
+    margin: 0px;
+    width: 525px;
+    border: none;
+    border-radius: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000050;
+}
+.searchInput {
+    width: 450px;
+    height: 50px;
+    border-style: none;
+    border-radius: 100px;
+    background-color: transparent;
+    font-size: 20px;
+    outline: none;
+    color: white;
+    position: relative;
+}
+.searchButton {
+    background-color: transparent;
+    border-style: none;
+    border-radius: 100px;
+    width: 40px;
+    position: relative;
+    filter: invert();
+}
+.pickCardMessage {
+    margin: 10px 0px 30px 0px;
+    color: #ffffff;
+    position: relative;
+}
+.emphasis {
+    color: #EF8354;
+    filter: drop-shadow(2px 2px 2px #000000);
+}
+
+
+
+
+/* CASE CARDS AREA */
+.caseCardArea {
+    width: 100%;
+    height: 1000px;
+    background-image: linear-gradient(180deg, #000000, #2D3142 99%);
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+.caseCard {
+    background-color: #BFC0C0;
+    border-radius: 8px;
+    margin: 20px;
+}
