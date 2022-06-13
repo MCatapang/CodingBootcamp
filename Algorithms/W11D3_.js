@@ -10,9 +10,6 @@ class SinglyLinkedList {
         this.head = null;
     }
 
-    /**
-     * @returns {any} The data from the node that was removed.
-     */
     removeBack() {
         let runner = this.head;
         while(runner.next.next !== null) {
@@ -22,9 +19,6 @@ class SinglyLinkedList {
         return this;
     }
 
-    /**
-     * @returns {boolean}
-     */
     contains(val) {
         let runner = this.head;
         while(runner !== null) {
@@ -39,9 +33,6 @@ class SinglyLinkedList {
         return false;
     }
 
-    /**
-     * @returns {boolean}
-     */
     containsRecursive(val, current = this.head) {
         if(current.data === val) {
             return true;
@@ -53,14 +44,6 @@ class SinglyLinkedList {
     }
 
     // EXTRA
-    /**
-     * @returns {?number} The max int or null if none.
-     */
-    recursiveMax(runner = this.head, maxNode = this.head) {}
-
-    /**
-     * @returns {SinglyLinkedList} This list.
-     */
     insertAtFront(data) {
         const newHead = new ListNode(data);
         newHead.next = this.head;
@@ -68,9 +51,6 @@ class SinglyLinkedList {
         return this;
     }
 
-    /**
-     * @returns {any} The data from the removed node.
-     */
     removeHead() {
         if (this.isEmpty()) {
             return null;
@@ -81,9 +61,6 @@ class SinglyLinkedList {
         return oldHead.data;
     }
 
-    /**
-     * @returns {number|NaN} The average of the node's data.
-     */
     average() {
         let runner = this.head;
         let sum = 0;
@@ -105,24 +82,10 @@ class SinglyLinkedList {
         return sum / cnt;
     }
 
-    /**
-     * Determines if this list is empty.
-     * - Time: O(?).
-     * - Space: O(?).
-     * @returns {boolean}
-     */
     isEmpty() {
         return this.head === null;
     }
 
-    /**
-     * Creates a new node with the given data and inserts it at the back of
-     * this list.
-     * - Time: O(?).
-     * - Space: O(?).
-     * @param {any} data The data to be added to the new node.
-     * @returns {SinglyLinkedList} This list.
-     */
     insertAtBack(data) {
         const newBack = new ListNode(data);
 
@@ -141,16 +104,6 @@ class SinglyLinkedList {
         return this;
     }
 
-    /**
-     * Creates a new node with the given data and inserts it at the back of
-     * this list.
-     * - Time: O(?).
-     * - Space: O(?).
-     * @param {any} data The data to be added to the new node.
-     * @param {?ListNode} runner The current node during the traversal of this list
-     *    or null when the end of the list has been reached.
-     * @returns {SinglyLinkedList} This list.
-     */
     insertAtBackRecursive(data, runner = this.head) {
     if (this.isEmpty()) {
         this.head = new ListNode(data);
@@ -164,13 +117,6 @@ class SinglyLinkedList {
     return this.insertAtBackRecursive(data, runner.next);
     }
 
-    /**
-     * Calls insertAtBack on each item of the given array.
-     * - Time: O(n * m) n = list length, m = arr.length.
-     * - Space: O(1) constant.
-     * @param {Array<any>} vals The data for each new node.
-     * @returns {SinglyLinkedList} This list.
-     */
     insertAtBackMany(vals) {
         for (const item of vals) {
             this.insertAtBack(item);
@@ -178,13 +124,6 @@ class SinglyLinkedList {
         return this;
     }
 
-    /**
-     * Calls insertAtBack on each item of the given array.
-     * - Time: O(n * m) n = list length, m = arr.length.
-     * - Space: O(1) constant.
-     * @param {Array<any>} vals The data for each new node.
-     * @returns {SinglyLinkedList} This list.
-     */
     insertAtBackMany(vals) {
         for (const item of vals) {
             this.insertAtBack(item);
@@ -192,12 +131,6 @@ class SinglyLinkedList {
         return this;
     }
 
-    /**
-     * Converts this list into an array containing the data of each node.
-     * - Time: O(n) linear.
-     * - Space: O(n).
-     * @returns {Array<any>} An array of each node's data.
-     */
     toArr() {
         const arr = [];
         let runner = this.head;
@@ -216,13 +149,15 @@ Below commented code depends on insertAtBack method to be completed,
 after completing it, uncomment the code.
 */
 const emptyList = new SinglyLinkedList();
-emptyList.insertAtBackMany([12,13,14,15,16,17]);
+console.log(emptyList.insertAtBack(13));
+console.log(emptyList.insertAtBack(15));
+console.log(emptyList.insertAtBack(20));
 // emptyList.insertAtBackMany([12]);
 // emptyList.insertAtBackMany([]);
-console.log(emptyList.containsRecursive(12));
-console.log(emptyList.containsRecursive(15));
-console.log(emptyList.containsRecursive(17));
-console.log(emptyList.containsRecursive(42));
+// console.log(emptyList.containsRecursive(12));
+// console.log(emptyList.containsRecursive(15));
+// console.log(emptyList.containsRecursive(17));
+// console.log(emptyList.containsRecursive(42));
 
 
 // const singleNodeList = new SinglyLinkedList().insertAtBackMany([1]);
